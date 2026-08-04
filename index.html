@@ -9,52 +9,93 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- 源ノ角ゴシック(Google FontsではNoto Sans JPとして配信)1書体に統一 -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <!-- 制作中はCSS更新が確実に反映されるようv=を都度上げる -->
-<link rel="stylesheet" href="assets/css/style.css?v=20260804o">
+<link rel="stylesheet" href="assets/css/style.css?v=20260804p">
 <!-- JSが動く環境でだけ登場アニメーションを有効にする -->
 <script>document.documentElement.className += ' js';</script>
 </head>
 <body>
 
+<!-- ============ 最上部の注記帯 ============ -->
+<div class="topbar">
+  <div class="container">収益不動産の企画・売買から賃貸管理・出口戦略まで、福岡でワンストップにサポートいたします</div>
+</div>
+
 <!-- ============ ヘッダー ============ -->
 <header class="site-header" id="siteHeader">
-  <div class="header-top">
-    <div class="container header-top-inner">
-      <p class="header-tagline">福岡・新宮町／収益不動産の企画・売買・賃貸管理　＜宅建業・賃貸住宅管理業 登録＞</p>
-      <div class="header-meta">
-        <span class="header-tel">代表 <a href="tel:0927190322">092-719-0322</a></span>
-        <span class="header-hours">受付 9:30〜18:00（土日祝を除く）</span>
-      </div>
-    </div>
-  </div>
   <div class="header-main">
     <div class="container header-main-inner">
-      <a href="index.html" class="site-logo">
-        <img src="assets/img/logo.png" alt="株式会社Life" width="200" height="50">
-      </a>
-      <nav class="global-nav" id="globalNav">
-        <ul>
-          <li><a href="#message">代表挨拶</a></li>
-          <li><a href="#strength">Lifeの強み</a></li>
-          <li><a href="#support">できること</a></li>
-          <li><a href="#brand">企画した建物</a></li>
-          <li><a href="#news">新着情報</a></li>
-          <li><a href="#company">会社情報</a></li>
-        </ul>
-      </nav>
+      <div class="header-brand">
+        <a href="index.html" class="site-logo"><img src="assets/img/logo.png" alt="株式会社Life" width="230" height="57"></a>
+        <span class="header-badge">賃貸経営 専門サイト</span>
+      </div>
+      <div class="header-right">
+        <div class="header-tel-box">
+          <p class="header-tel-label">不動産投資・管理のご相談はこちら</p>
+          <p class="header-tel"><a href="tel:0927190322">092-719-0322</a></p>
+        </div>
+        <div class="header-hours">
+          <p>受付時間<br><strong>9:30〜18:00</strong></p>
+          <p>定休日<br><strong>土・日・祝</strong></p>
+        </div>
+        <div class="header-btns">
+          <a href="#contact" class="header-btn">オーナー様お問合せはこちら<span>›</span></a>
+          <a href="#others" class="header-btn">ご入居者様向けのご案内<span>›</span></a>
+        </div>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-  <!-- 常設CTA帯（ベンチマークの3ボタン帯） -->
+
+  <!-- グローバルナビ -->
+  <nav class="global-nav" id="globalNav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#message">会社情報</a></li>
+        <li><a href="#strength">当社について</a></li>
+        <li><a href="#support">当社がご提供できること</a></li>
+        <li><a href="#brand">新築プランニング</a></li>
+        <li><a href="#support">賃貸管理</a></li>
+        <li><a href="#others">ご入居者様へ</a></li>
+        <li><a href="#contact">お問合せ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 実績バー -->
+  <div class="proof-bar">
+    <div class="container proof-bar-inner">
+      <div class="proof-lead">
+        <span class="proof-flag">実績</span>
+        <p class="proof-lead-title">企画から管理までの数字</p>
+        <p class="proof-lead-note">当社が企画・販売した物件の実績値です</p>
+      </div>
+      <a href="#numbers" class="proof-box">
+        <span class="proof-box-label">新築アパート 平均表面利回り</span>
+        <span class="proof-box-num"><em class="count" data-count="9.75" data-dec="2">0.00</em>%</span>
+      </a>
+      <a href="#numbers" class="proof-box">
+        <span class="proof-box-label">新築RC 平均表面利回り</span>
+        <span class="proof-box-num"><em class="count" data-count="6.88" data-dec="2">0.00</em>%</span>
+      </a>
+      <a href="#brand" class="proof-box">
+        <span class="proof-box-label">直近2年の竣工実績</span>
+        <span class="proof-box-num"><em class="count" data-count="10">0</em>棟</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 常設CTA帯 -->
   <div class="cta-bar">
     <div class="container cta-bar-inner">
       <p class="cta-bar-label">お気軽にご相談・<br class="sp-only">お問合せください</p>
-      <a href="#contact" class="cta-btn cta-btn-1">無料の投資相談<span>›</span></a>
-      <a href="#contact" class="cta-btn cta-btn-2">無料の管理相談<span>›</span></a>
-      <a href="#contact" class="cta-btn cta-btn-3">空室物件のご案内<span>›</span></a>
+      <a href="#contact" class="cta-btn cta-btn-1">無料の投資相談はこちら<span>›</span></a>
+      <a href="#contact" class="cta-btn cta-btn-2">無料の管理相談はこちら<span>›</span></a>
+      <a href="#others" class="cta-btn cta-btn-3">空室物件情報はこちら<span>›</span></a>
     </div>
   </div>
 </header>
@@ -63,42 +104,67 @@
 
 <!-- ============ メインビジュアル ============ -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="container hero-inner">
-    <p class="hero-eyebrow reveal">福岡県新宮町／収益不動産の企画・売買・賃貸管理</p>
-    <h1 class="hero-title reveal">利回りは、<br class="sp-only"><em>建てる前</em>に決まっている。</h1>
-    <p class="hero-lead reveal">建ててから工夫できることは、そう多くありません。<br class="pc-only">
-      Lifeは土地を読むところから設計し、竣工後の入居付けと日々の運営まで一社で担います。<br class="pc-only">数字が決まる最初の段階から、最後まで責任を持つためです。</p>
-    <div class="hero-cta reveal">
-      <a href="#contact" class="btn btn-accent">無料相談を予約する</a>
-      <a href="#support" class="btn btn-ghost">できることを見る</a>
+  <div class="container">
+    <h1 class="hero-title reveal">Lifeは<em>企画から管理まで</em>の一貫プランニング</h1>
+    <div class="hero-split">
+      <a href="#brand" class="hero-panel reveal">
+        <img src="assets/img/bukken-klang.jpg" alt="Lifeが企画した新築アパート">
+        <div class="hero-panel-body">
+          <p class="hero-panel-sub">土地の企画から利回りを設計する</p>
+          <p class="hero-panel-title"><em>高利回り</em><br>新築アパート</p>
+          <p class="hero-panel-note">平均表面利回り 9.75％（当社企画物件の実績値）</p>
+        </div>
+      </a>
+      <a href="#support" class="hero-panel reveal">
+        <img src="assets/img/bukken-serena-fukutsu.jpg" alt="Lifeが管理する賃貸物件">
+        <div class="hero-panel-body">
+          <p class="hero-panel-sub">空室・滞納・修繕費をまとめて抑える</p>
+          <p class="hero-panel-title"><em>手取りを守る</em><br>賃貸管理</p>
+          <p class="hero-panel-note">設備トラブルは24時間受付／定期巡回つき</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ 実績ストリップ ============ -->
-<section class="numbers" aria-label="実績数字">
-  <div class="container numbers-inner">
-    <p class="numbers-headline"><span class="numbers-badge">実績</span>企画段階から設計した、<em>数字の裏付け</em></p>
-    <div class="numbers-grid">
-      <div class="num-item">
-        <p class="num-label">新築アパート 平均表面利回り</p>
-        <p class="num-value"><span class="count" data-count="9.75" data-dec="2">0.00</span><span class="num-unit">%</span></p>
-      </div>
-      <div class="num-item">
-        <p class="num-label">新築RC 平均表面利回り</p>
-        <p class="num-value"><span class="count" data-count="6.88" data-dec="2">0.00</span><span class="num-unit">%</span></p>
-      </div>
-      <div class="num-item">
-        <p class="num-label">直近2年の竣工実績</p>
-        <p class="num-value"><span class="count" data-count="10">0</span><span class="num-unit">棟</span></p>
-      </div>
-      <div class="num-item">
-        <p class="num-label">設備トラブル受付</p>
-        <p class="num-value"><span class="count" data-count="24">0</span><span class="num-unit">時間</span></p>
-      </div>
+<!-- ============ アイコン数字ボックス ============ -->
+<section class="numbers" id="numbers">
+  <div class="container numbers-grid">
+    <div class="num-card reveal">
+      <span class="num-icon" aria-hidden="true">%</span>
+      <p class="num-label">新築アパート<br>平均表面利回り</p>
+      <p class="num-value"><span class="count" data-count="9.75" data-dec="2">0.00</span><span class="num-unit">%</span></p>
+      <p class="num-note">※2021年3月までの企画販売物件</p>
     </div>
-    <p class="numbers-note">※表面利回りは2021年3月までに当社が企画販売した物件の実績値です。竣工実績は2024〜2025年に竣工した企画物件の棟数。</p>
+    <div class="num-card reveal">
+      <span class="num-icon" aria-hidden="true">%</span>
+      <p class="num-label">新築RC<br>平均表面利回り</p>
+      <p class="num-value"><span class="count" data-count="6.88" data-dec="2">0.00</span><span class="num-unit">%</span></p>
+      <p class="num-note">※2021年3月までの企画販売物件</p>
+    </div>
+    <div class="num-card reveal">
+      <span class="num-icon" aria-hidden="true">棟</span>
+      <p class="num-label">直近2年の<br>竣工実績</p>
+      <p class="num-value"><span class="count" data-count="10">0</span><span class="num-unit">棟</span></p>
+      <p class="num-note">※2024〜2025年竣工の企画物件</p>
+    </div>
+    <div class="num-card reveal">
+      <span class="num-icon" aria-hidden="true">24</span>
+      <p class="num-label">設備トラブル<br>受付体制</p>
+      <p class="num-value"><span class="count" data-count="24">0</span><span class="num-unit">時間</span></p>
+      <p class="num-note">※管理受託物件が対象です</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 登録バナー ============ -->
+<section class="reg-banner">
+  <div class="container reg-inner">
+    <span class="reg-badge">国土交通大臣<br>登録</span>
+    <span class="reg-cross">×</span>
+    <span class="reg-badge">福岡県知事<br>免許</span>
+    <p class="reg-text">Lifeは<em>賃貸住宅管理業者</em>および<em>宅地建物取引業者</em>として登録された会社です</p>
+    <p class="reg-note">賃貸住宅管理業者 国土交通大臣(1)第002512号／宅地建物取引業者 福岡県知事(2)第19525号</p>
   </div>
 </section>
 
@@ -106,12 +172,15 @@
 <section class="pickup-banner">
   <div class="container pickup-inner">
     <div class="pickup-text">
-      <p class="pickup-lead">空室が続いている。修繕費が読めない。連絡しても動いてくれない。</p>
-      <h2 class="pickup-title">管理会社は、<br class="sp-only">途中で<em>変えていい</em>。</h2>
+      <h2 class="pickup-title">賃貸アパート・マンションの<br class="sp-only">管理、承ります！</h2>
+      <p class="pickup-tel-row">
+        <a href="tel:0927190322" class="pickup-tel">092-719-0322</a>
+        <span class="pickup-hours">受付時間 9:30〜18:00　定休日 土・日・祝</span>
+      </p>
     </div>
-    <div class="pickup-contact">
-      <a href="tel:0927190322" class="pickup-tel">092-719-0322</a>
-      <p class="pickup-hours">受付時間 9:30〜18:00／土日祝を除く</p>
+    <div class="pickup-side">
+      <img src="assets/img/tenpo.jpg" alt="株式会社Life 本店" class="pickup-photo">
+      <a href="#contact" class="btn btn-yellow">詳しくはこちらから<span>›</span></a>
     </div>
   </div>
 </section>
@@ -121,203 +190,175 @@
   <div class="container message-inner">
     <div class="message-photo reveal">
       <img src="assets/img/daihyo.jpg" alt="株式会社Life 代表取締役 内村優介" loading="lazy">
-      <p class="message-name">代表取締役　内村 優介</p>
+      <div class="message-profile">
+        <p class="message-role">代表取締役</p>
+        <p class="message-name">内村 優介</p>
+        <ul class="message-career">
+          <li>福岡県糟屋郡新宮町に本店を置く</li>
+          <li>平成30年　株式会社Life 設立</li>
+          <li>令和　　　飯塚店を開設</li>
+          <li>宅地建物取引業／賃貸住宅管理業 登録</li>
+        </ul>
+      </div>
     </div>
     <div class="message-body reveal">
-      <p class="section-eyebrow">Message</p>
-      <h2 class="section-title">建てて終わり、<br>売って終わりにしない。</h2>
-      <p class="message-text">賃貸経営は、契約書を交わした日から始まります。私たちが見ているのはその日ではなく、十年後二十年後にオーナー様の手元へいくら残るかです。だから、売りやすい物件ではなく、貸し続けられる物件を企画します。取引が終わってからのほうが、私たちの仕事は長い。</p>
-      <!-- 信念と社是は正式な文言。一字も変えない。 -->
-      <div class="creed">
-        <div class="creed-belief">
-          <p class="creed-label">信念</p>
-          <ol class="creed-list">
-            <li>正しい事を正しいと言えること</li>
-            <li>世間の常識と組織の常識が一致していること</li>
-            <li>ひたむきで誠実に働いた者がきちんと評価されること</li>
-          </ol>
-        </div>
-        <blockquote class="creed-motto">
-          <p class="creed-label creed-label-light">社是</p>
-          <p class="creed-motto-text">仕事はお客様のために行い、常に誠実で前向きに構え、正しいことを行い人々の生活の向上のための力となる。</p>
-        </blockquote>
-      </div>
-      <a href="#company" class="btn btn-primary">会社情報へ</a>
+      <h2 class="message-title">建てて終わり、売って終わりにしない</h2>
+      <p class="message-catch">Lifeは、土地の企画から建物の設計、入居付け、<br class="pc-only">日々の運営までを一社で担う会社です。</p>
+      <p class="message-text">賃貸経営は、契約書を交わした日から始まります。私たちが見ているのはその日ではなく、<mark>十年後二十年後にオーナー様の手元へいくら残るか</mark>です。だから、売りやすい物件ではなく、貸し続けられる物件を企画します。取引が終わってからのほうが、私たちの仕事は長い。</p>
+      <p class="message-text">建ててから工夫できることは、そう多くありません。どの街の、どの通りに、何平米を何戸つくるか。この判断が家賃を決め、家賃が利回りを決めます。だからLifeは、<mark>数字が決まる最初の段階から</mark>関わります。</p>
+      <a href="#strength" class="btn btn-primary">当社についてへ<span>›</span></a>
     </div>
+  </div>
+</section>
+
+<!-- ============ 新着情報 ============ -->
+<section class="news" id="news">
+  <div class="container">
+    <h2 class="sec-title reveal">新着情報</h2>
+    <ul class="news-list">
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2025年03月<span class="news-new">NEW</span></p>
+        <p class="news-text">【新築アパート「Klang（クラン）」が竣工しました】</p></div>
+        <img src="assets/img/bukken-klang.jpg" alt="" loading="lazy"></a></li>
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2025年03月</p>
+        <p class="news-text">【新築アパート「Taurus（トーラス）」が竣工しました】</p></div>
+        <img src="assets/img/bukken-taurus.jpg" alt="" loading="lazy"></a></li>
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2025年03月</p>
+        <p class="news-text">【「セレーナ福津」が竣工しました】</p></div>
+        <img src="assets/img/bukken-serena-fukutsu.jpg" alt="" loading="lazy"></a></li>
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2024年08月</p>
+        <p class="news-text">【新築アパート「niko（ニコ）」「Onesta（オネスタ）」が竣工しました】</p></div>
+        <img src="assets/img/bukken-niko.jpg" alt="" loading="lazy"></a></li>
+    </ul>
+    <div class="center-cta"><a href="#" class="btn btn-primary">新着情報一覧へ<span>›</span></a></div>
   </div>
 </section>
 
 <!-- ============ 強み ============ -->
 <section class="strength" id="strength">
   <div class="container">
-    <p class="section-eyebrow section-eyebrow-light reveal">Strength</p>
-    <h2 class="section-title section-title-light reveal">なぜ、Lifeなのか</h2>
+    <h2 class="sec-title reveal">株式会社Lifeの強み</h2>
 
-    <h3 class="sub-heading reveal">他社と違うところ</h3>
-    <div class="feature-grid">
-      <div class="feature-card reveal">
-        <p class="feature-num">01</p>
-        <h4>土地から出口まで、窓口はひとつ</h4>
+    <div class="feature-row reveal">
+      <div class="feature-photo"><img src="assets/img/office.jpg" alt="株式会社Life 店内" loading="lazy"></div>
+      <div class="feature-card">
+        <h3>当社の特徴</h3>
         <p>土地の仕入れ、建物の企画、販売、入居付け、日々の運営、そして売却。すべて自社で担います。「そこは施工会社に聞いてください」と言われることがありません。</p>
-      </div>
-      <div class="feature-card reveal">
-        <p class="feature-num">02</p>
-        <h4>利回りは、図面を引く前に決まる</h4>
-        <p>どの街の、どの通りに、何平米を何戸つくるか。この判断が家賃を決め、家賃が利回りを決めます。建ててから埋め方を考えるのでは、もう取り返せません。</p>
-      </div>
-      <div class="feature-card reveal">
-        <p class="feature-num">03</p>
-        <h4>福岡の家賃を、肌で知っている</h4>
-        <p>新宮・福岡市・飯塚を中心に、地場の仲介会社と日常的にやり取りしています。募集資料の数字ではなく、いま実際にいくらで決まっているかで判断します。</p>
+        <a href="#support" class="btn btn-yellow">当社の特徴へ<span>›</span></a>
       </div>
     </div>
 
-    <h3 class="sub-heading reveal">管理でやっていること、5つ</h3>
+    <div class="feature-row feature-row-rev reveal">
+      <div class="feature-photo"><img src="assets/img/bukken-onesta.jpg" alt="Lifeが企画した物件" loading="lazy"></div>
+      <div class="feature-card">
+        <h3>当社が選ばれる5つの理由</h3>
+        <p>賃料の決め方、募集の広げ方、入居審査、工事の発注、退去を止める動き。管理で実際にやっていることを5つに分けてご説明します。</p>
+        <a href="#reasons" class="btn btn-yellow">選ばれる5つの理由へ<span>›</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5つの理由 ============ -->
+<section class="reasons" id="reasons">
+  <div class="container">
+    <h2 class="sec-title reveal">当社が選ばれる5つの理由</h2>
+    <p class="sec-lead reveal">管理会社が実際に何をしているかは、外からは見えにくいものです。Lifeがやっていることを5つに分けてご説明します。</p>
     <ol class="reason-list">
-      <li class="reason-item reveal">
-        <span class="reason-num">1</span>
-        <div>
-          <h4>高くも、安くも出さない</h4>
-          <p>賃料を欲張れば空室期間が伸び、下げれば収益が痩せます。周辺の競合と実際の成約価格を調べ、いま決まる金額で募集します。</p>
-        </div>
-      </li>
-      <li class="reason-item reveal">
-        <span class="reason-num">2</span>
-        <div>
-          <h4>自社で抱え込まない</h4>
-          <p>空室情報は地場の仲介会社へ広く流します。自社で決めることにこだわって空室を長引かせるより、早く埋まるほうがオーナー様の利益になります。</p>
-        </div>
-      </li>
-      <li class="reason-item reveal">
-        <span class="reason-num">3</span>
-        <div>
-          <h4>埋めることを目的にしない</h4>
-          <p>急いで埋めた結果の滞納は、空室より高くつきます。入居者の属性を厳正に見て、長く住んでいただける方をお通しします。</p>
-        </div>
-      </li>
-      <li class="reason-item reveal">
-        <span class="reason-num">4</span>
-        <div>
-          <h4>工事は、言い値で発注しない</h4>
-          <p>修繕は必要です。ただし請求書をそのまま回すことはしません。外注先と単価を管理し、必要な工事を適正な金額で行います。</p>
-        </div>
-      </li>
-      <li class="reason-item reveal">
-        <span class="reason-num">5</span>
-        <div>
-          <h4>解約は、不満が溜まる前に止める</h4>
-          <p>設備トラブルは24時間受付。あわせて定期巡回と入居者様との対話を重ね、退去の芽を早い段階で摘みます。</p>
-        </div>
-      </li>
+      <li class="reason-item reveal"><span class="reason-num">1</span>
+        <div><h3>高くも、安くも出さない</h3>
+        <p>賃料を欲張れば空室期間が伸び、下げれば収益が痩せます。周辺の競合と実際の成約価格を調べ、いま決まる金額で募集します。</p></div></li>
+      <li class="reason-item reveal"><span class="reason-num">2</span>
+        <div><h3>自社で抱え込まない</h3>
+        <p>空室情報は地場の仲介会社へ広く流します。自社で決めることにこだわって空室を長引かせるより、早く埋まるほうがオーナー様の利益になります。</p></div></li>
+      <li class="reason-item reveal"><span class="reason-num">3</span>
+        <div><h3>埋めることを目的にしない</h3>
+        <p>急いで埋めた結果の滞納は、空室より高くつきます。入居者の属性を厳正に見て、長く住んでいただける方をお通しします。</p></div></li>
+      <li class="reason-item reveal"><span class="reason-num">4</span>
+        <div><h3>工事は、言い値で発注しない</h3>
+        <p>修繕は必要です。ただし請求書をそのまま回すことはしません。外注先と単価を管理し、必要な工事を適正な金額で行います。</p></div></li>
+      <li class="reason-item reveal"><span class="reason-num">5</span>
+        <div><h3>解約は、不満が溜まる前に止める</h3>
+        <p>設備トラブルは24時間受付。あわせて定期巡回と入居者様との対話を重ね、退去の芽を早い段階で摘みます。</p></div></li>
     </ol>
   </div>
 </section>
 
-<!-- ============ できること ============ -->
+<!-- ============ トータルサポート ============ -->
 <section class="support" id="support">
   <div class="container">
-    <p class="section-eyebrow reveal">Total Support</p>
-    <h2 class="section-title reveal">Lifeができること</h2>
-    <p class="section-lead reveal">買う、建てる、貸す、直す、売る。どこか一つを切り出すのではなく、通しで担当します。</p>
+    <h2 class="sec-title reveal">Lifeのトータルサポート</h2>
+    <p class="sec-lead reveal">買う、建てる、貸す、直す、売る。どこか一つを切り出すのではなく、通しで担当します。</p>
     <div class="support-grid">
       <a href="#" class="support-card reveal">
-        <p class="support-num">01</p>
+        <img src="assets/img/office2.jpg" alt="不動産購入のご相談" loading="lazy">
         <h3>不動産購入</h3>
-        <p>表面利回りの数字ではなく、返済と経費を引いたあとに残る額でご説明します。周辺相場から家賃の妥当性を検証したうえでご紹介し、金融機関のご紹介まで対応します。</p>
-        <span class="support-more">くわしく見る ›</span>
+        <p>返済と経費を引いたあとに残る額でご説明します。金融機関のご紹介まで対応します。</p>
       </a>
       <a href="#" class="support-card reveal">
-        <p class="support-num">02</p>
+        <img src="assets/img/bukken-klang.jpg" alt="新築プランニング" loading="lazy">
         <h3>新築プランニング</h3>
-        <p>中古では避けきれない突発的な修繕を、新築なら計画に織り込めます。土地の選定から間取りと戸数まで、収支から逆算して決めていきます。</p>
-        <span class="support-more">くわしく見る ›</span>
+        <p>土地の選定から間取りと戸数まで、収支から逆算して決めていきます。</p>
       </a>
       <a href="#" class="support-card reveal">
-        <p class="support-num">03</p>
+        <img src="assets/img/tenpo.jpg" alt="賃貸管理" loading="lazy">
         <h3>賃貸管理</h3>
-        <p>募集、審査、契約、家賃の回収、設備対応、更新、退去まで。オーナー様が動かなくても回る体制をおつくりします。</p>
-        <span class="support-more">くわしく見る ›</span>
+        <p>募集、審査、契約、家賃の回収、設備対応、更新、退去まで一括して承ります。</p>
       </a>
       <a href="#" class="support-card reveal">
-        <p class="support-num">04</p>
+        <img src="assets/img/bukken-taurus.jpg" alt="売却・出口戦略" loading="lazy">
         <h3>売却・出口戦略</h3>
-        <p>持ち続けるか、組み替えるか。相場と残債と税金を並べたうえで、「いまは売らない」という結論も含めてご提案します。</p>
-        <span class="support-more">くわしく見る ›</span>
+        <p>相場と残債と税金を並べ、「いまは売らない」という結論も含めてご提案します。</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============ 新築ブランド ============ -->
+<!-- ============ 企画した建物 ============ -->
 <section class="brand" id="brand">
   <div class="container">
-    <p class="section-eyebrow reveal">Our Brand</p>
-    <h2 class="section-title reveal">Lifeが企画した建物</h2>
-    <p class="section-lead reveal">同じ図面は使い回しません。一棟ごとに土地を読み、名前を付けて設計しています。</p>
-    <div class="brand-grid">
-      <article class="brand-card reveal">
-        <div class="brand-photo"><img src="assets/img/bukken-klang.jpg" alt="Klang（クラン）外観" loading="lazy"></div>
-        <div class="brand-body">
-          <h3>Klang<span>クラン</span></h3>
-          <p class="brand-spec">2025年3月竣工／木造省令準耐火構造／全10戸</p>
+    <h2 class="sec-title sec-title-light reveal">Lifeが企画する新築賃貸<br class="sp-only">木造アパート・RCマンション</h2>
+    <div class="brand-split">
+      <div class="brand-panel reveal">
+        <img src="assets/img/bukken-klang.jpg" alt="木造アパートの外観" class="brand-hero">
+        <div class="brand-panel-body">
+          <p class="brand-panel-sub">土地の企画から利回りを設計する</p>
+          <p class="brand-panel-name">木造アパート</p>
+          <p class="brand-panel-text">同じ図面は使い回しません。一棟ごとに土地を読み、名前を付けて設計しています。平均表面利回りは9.75％です。</p>
         </div>
-      </article>
-      <article class="brand-card reveal">
-        <div class="brand-photo"><img src="assets/img/bukken-onesta.jpg" alt="Onesta（オネスタ）外観" loading="lazy"></div>
-        <div class="brand-body">
-          <h3>Onesta<span>オネスタ</span></h3>
-          <p class="brand-spec">2024年8月竣工／木造省令準耐火構造／全6戸</p>
+        <div class="brand-thumbs">
+          <img src="assets/img/bukken-onesta.jpg" alt="Onesta（オネスタ）" loading="lazy">
+          <img src="assets/img/bukken-taurus.jpg" alt="Taurus（トーラス）" loading="lazy">
+          <img src="assets/img/bukken-niko.jpg" alt="niko（ニコ）" loading="lazy">
+          <img src="assets/img/bukken-serena-fukutsu.jpg" alt="セレーナ福津" loading="lazy">
         </div>
-      </article>
-      <article class="brand-card reveal">
-        <div class="brand-photo"><img src="assets/img/bukken-taurus.jpg" alt="Taurus（トーラス）外観" loading="lazy"></div>
-        <div class="brand-body">
-          <h3>Taurus<span>トーラス</span></h3>
-          <p class="brand-spec">2025年3月竣工／木造省令準耐火構造／全6戸</p>
+      </div>
+      <div class="brand-panel reveal">
+        <img src="assets/img/bukken-serena-fukutsu.jpg" alt="RCマンションの外観" class="brand-hero">
+        <div class="brand-panel-body">
+          <p class="brand-panel-sub">規模を活かして長く貸す</p>
+          <p class="brand-panel-name">RCマンション</p>
+          <p class="brand-panel-text">木造より戸数を取れる立地では、RC造で企画します。平均表面利回りは6.88％、耐用年数の長さが出口でも効きます。</p>
         </div>
-      </article>
+        <div class="brand-thumbs">
+          <img src="assets/img/bukken-klang.jpg" alt="Klang（クラン）" loading="lazy">
+          <img src="assets/img/bukken-taurus.jpg" alt="Taurus（トーラス）" loading="lazy">
+          <img src="assets/img/office.jpg" alt="室内" loading="lazy">
+          <img src="assets/img/office2.jpg" alt="共用部" loading="lazy">
+        </div>
+      </div>
     </div>
-    <div class="center-cta reveal">
-      <a href="#" class="btn btn-primary">企画実績をすべて見る</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 新着情報 / 掲載情報 ============ -->
-<section class="news" id="news">
-  <div class="container news-inner">
-    <div class="news-col reveal">
-      <p class="section-eyebrow">News</p>
-      <h2 class="news-title">新着情報</h2>
-      <ul class="news-list">
-        <li><a href="#"><time>2025.03</time><span class="news-tag">竣工</span>新築アパート「Klang（クラン）」が竣工しました</a></li>
-        <li><a href="#"><time>2025.03</time><span class="news-tag">竣工</span>新築アパート「Taurus（トーラス）」が竣工しました</a></li>
-        <li><a href="#"><time>2025.03</time><span class="news-tag">竣工</span>「セレーナ飯塚Ⅱ」「セレーナ福津」が竣工しました</a></li>
-        <li><a href="#"><time>2024.08</time><span class="news-tag">竣工</span>「nico」「Onesta」2棟が同時竣工しました</a></li>
-        <li><a href="#"><time>2024.01</time><span class="news-tag">竣工</span>RC造30戸「Jugame CP吉塚」が竣工しました</a></li>
-      </ul>
-      <a href="#" class="text-link">新着情報の一覧へ</a>
-    </div>
-    <div class="news-col reveal">
-      <p class="section-eyebrow">Owner's Column</p>
-      <h2 class="news-title">オーナー様向けお役立ち情報</h2>
-      <ul class="news-list">
-        <li><a href="#"><time>準備中</time>表面利回りと実質利回り｜手取りで考える収益の見方</a></li>
-        <li><a href="#"><time>準備中</time>管理会社の切り替えを検討する時のチェック項目</a></li>
-        <li><a href="#"><time>準備中</time>新築アパートの企画で利回りが決まる理由</a></li>
-        <li><a href="#"><time>準備中</time>空室が埋まらない時にまず見直すべき3つのこと</a></li>
-        <li><a href="#"><time>準備中</time>相続を見据えた収益物件の持ち方・渡し方</a></li>
-      </ul>
-      <p class="news-note">※記事タイトルは掲載予定のサンプルです。原稿は今後ご用意いただきます。</p>
-    </div>
+    <div class="center-cta reveal"><a href="#" class="btn btn-yellow">企画実績をすべて見る<span>›</span></a></div>
   </div>
 </section>
 
 <!-- ============ 会社情報 ============ -->
 <section class="company" id="company">
   <div class="container">
-    <p class="section-eyebrow reveal">Company</p>
-    <h2 class="section-title reveal">会社情報</h2>
+    <h2 class="sec-title reveal">会社情報</h2>
     <div class="company-inner">
       <div class="company-main reveal">
         <table class="company-table">
@@ -330,6 +371,21 @@
           <tr><th>免許番号</th><td>宅地建物取引業者　福岡県知事(2) 第19525号<br>賃貸住宅管理業者　国土交通大臣(1) 第002512号</td></tr>
           <tr><th>事業内容</th><td>新築プランニング／不動産売買仲介／不動産賃貸仲介／不動産賃貸管理</td></tr>
         </table>
+        <!-- 信念と社是は正式な文言。一字も変えない。 -->
+        <div class="creed">
+          <div class="creed-belief">
+            <p class="creed-label">信念</p>
+            <ol class="creed-list">
+              <li>正しい事を正しいと言えること</li>
+              <li>世間の常識と組織の常識が一致していること</li>
+              <li>ひたむきで誠実に働いた者がきちんと評価されること</li>
+            </ol>
+          </div>
+          <blockquote class="creed-motto">
+            <p class="creed-label creed-label-light">社是</p>
+            <p class="creed-motto-text">仕事はお客様のために行い、常に誠実で前向きに構え、正しいことを行い人々の生活の向上のための力となる。</p>
+          </blockquote>
+        </div>
       </div>
       <div class="company-side reveal">
         <img src="assets/img/tenpo.jpg" alt="株式会社Life 本店外観" class="company-photo" loading="lazy">
@@ -355,29 +411,29 @@
   </div>
 </section>
 
-<!-- ============ 入居者・仲介会社様 ============ -->
-<section class="others">
-  <div class="container others-grid">
-    <a href="#" class="others-card reveal">
-      <p class="others-eyebrow">For Residents</p>
-      <h3>ご入居者様へ</h3>
-      <p>ご入居中のルールとマナー、退去のお手続きをご案内します。</p>
-      <p class="others-tel">入居者様専用ダイヤル<strong>0120-500-876</strong></p>
-    </a>
-    <a href="#" class="others-card reveal">
-      <p class="others-eyebrow">For Agents</p>
-      <h3>仲介会社様へ</h3>
-      <p>当社管理物件の空室一覧をご確認いただけます。図面・条件のお問い合わせも受け付けています。</p>
-      <p class="others-link">空室一覧を見る<span>›</span></p>
-    </a>
+<!-- ============ 入居者・仲介会社 ============ -->
+<section class="others" id="others">
+  <div class="container">
+    <h2 class="sec-title reveal">ご入居者様・仲介会社様へ</h2>
+    <div class="others-grid">
+      <a href="#" class="others-card reveal">
+        <h3>ご入居者様へ</h3>
+        <p>ご入居中のルールとマナー、退去のお手続きをご案内しています。</p>
+        <p class="others-tel">入居者様専用ダイヤル<strong>0120-500-876</strong></p>
+      </a>
+      <a href="#" class="others-card reveal">
+        <h3>仲介会社様へ</h3>
+        <p>当社管理物件の空室一覧をご確認いただけます。図面・条件のお問い合わせも受け付けています。</p>
+        <p class="others-link">空室一覧を見る<span>›</span></p>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ============ お問い合わせ ============ -->
 <section class="contact" id="contact">
   <div class="container">
-    <p class="section-eyebrow section-eyebrow-light reveal">Contact</p>
-    <h2 class="section-title section-title-light reveal">お問い合わせ</h2>
+    <h2 class="sec-title sec-title-light reveal">お問い合わせ</h2>
     <p class="contact-lead reveal">いま持っている物件のご相談でも、これから買う・建てるご相談でも構いません。売り込みはいたしません。</p>
     <div class="contact-grid">
       <div class="contact-box reveal">
@@ -386,12 +442,12 @@
         <p class="contact-tel"><a href="tel:0927190322">092-719-0322</a></p>
         <p class="contact-label">入居者様専用</p>
         <p class="contact-tel"><a href="tel:0120500876">0120-500-876</a></p>
-        <p class="contact-hours">受付時間 9:30〜18:00（土日祝を除く）</p>
+        <p class="contact-hours">受付時間 9:30〜18:00／定休日 土・日・祝</p>
       </div>
       <div class="contact-box reveal">
         <h3>メールでのお問い合わせ</h3>
         <p>フォームは24時間受け付けています。物件の所在地と、いま困っていることだけ書いていただければ十分です。</p>
-        <a href="#" class="btn btn-accent btn-block">お問い合わせフォームへ</a>
+        <a href="#" class="btn btn-yellow btn-block">お問い合わせフォームへ<span>›</span></a>
         <p class="contact-hours">通常1〜2営業日以内にご返信いたします。</p>
       </div>
     </div>
@@ -404,20 +460,39 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="assets/img/logo.png" alt="株式会社Life" width="180" height="45" class="footer-logo">
+      <img src="assets/img/logo.png" alt="株式会社Life" width="200" height="50" class="footer-logo">
       <p>〒811-0119　福岡県糟屋郡新宮町中央駅前1丁目5-1<br>TEL 092-719-0322／FAX 092-719-0323</p>
       <p>飯塚店　福岡県飯塚市弁分13-1</p>
+      <p class="footer-license">宅地建物取引業者 福岡県知事(2)第19525号<br>賃貸住宅管理業者 国土交通大臣(1)第002512号</p>
     </div>
     <nav class="footer-nav" aria-label="フッターナビゲーション">
-      <ul>
-        <li><a href="#message">代表挨拶</a></li>
-        <li><a href="#strength">Lifeの強み</a></li>
-        <li><a href="#support">できること</a></li>
-        <li><a href="#brand">企画した建物</a></li>
-        <li><a href="#news">新着情報</a></li>
-        <li><a href="#company">会社情報</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
+      <div class="footer-nav-col">
+        <p class="footer-nav-head">当社について</p>
+        <ul>
+          <li><a href="#message">代表挨拶</a></li>
+          <li><a href="#strength">当社の特徴</a></li>
+          <li><a href="#reasons">選ばれる5つの理由</a></li>
+          <li><a href="#company">会社情報</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <p class="footer-nav-head">ご提供できること</p>
+        <ul>
+          <li><a href="#support">不動産購入</a></li>
+          <li><a href="#brand">新築プランニング</a></li>
+          <li><a href="#support">賃貸管理</a></li>
+          <li><a href="#support">売却・出口戦略</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <p class="footer-nav-head">その他</p>
+        <ul>
+          <li><a href="#news">新着情報</a></li>
+          <li><a href="#others">ご入居者様へ</a></li>
+          <li><a href="#others">仲介会社様へ</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
   <p class="footer-copy">&copy; 株式会社Life All Rights Reserved.</p>
@@ -429,6 +504,6 @@
   <a href="#contact" class="sticky-cta-form">無料相談フォーム</a>
 </div>
 
-<script src="assets/js/main.js?v=20260804o"></script>
+<script src="assets/js/main.js?v=20260804p"></script>
 </body>
 </html>
