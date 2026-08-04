@@ -492,6 +492,12 @@ ul, ol { list-style: none; }
   font-size: 25px; font-weight: 700; letter-spacing: .1em;
   margin: 2px 0 10px;
 }
+.brand-panel-name span {
+  display: inline-block; margin-left: 10px; vertical-align: 3px;
+  font-size: 11.5px; font-weight: 500; letter-spacing: .06em;
+  color: #10222b; background: var(--c-yellow);
+  padding: 2px 9px; border-radius: 2px;
+}
 .brand-panel-text { font-size: 13px; color: #cfe0e7; }
 .brand-thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 24px 24px; }
 .brand-thumbs img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 2px; }
