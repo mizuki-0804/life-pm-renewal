@@ -487,9 +487,10 @@ ul, ol { list-style: none; }
   transform: translateY(-5px); border-color: var(--c-primary);
 }
 .support-card:hover::before { transform: scaleX(1); }
-.support-num { font-size: 13px; font-weight: 700; color: var(--c-primary); letter-spacing: .14em; }
+/* 番号は伸ばさない。伸ばすのは本文だけ（下の :not で除外） */
+.support-num { font-size: 13px; font-weight: 700; color: var(--c-primary); letter-spacing: .14em; flex: none; }
 .support-card h3 { font-size: 19px; }
-.support-card p { font-size: 14.5px; color: var(--c-muted); flex: 1; }
+.support-card p:not(.support-num) { font-size: 14.5px; color: var(--c-muted); flex: 1; }
 .support-more { font-size: 14px; font-weight: 700; color: var(--c-primary); }
 @media (max-width: 1023px) { .support-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 767px) {
