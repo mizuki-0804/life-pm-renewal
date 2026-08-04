@@ -281,7 +281,7 @@ ul, ol { list-style: none; }
 }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(32px, 5.4vw, 56px);
+  font-size: clamp(27px, 5.4vw, 56px);
   font-weight: 700; line-height: 1.34;
   margin-bottom: 24px;
   transition-delay: .15s;
