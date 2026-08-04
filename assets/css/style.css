@@ -445,7 +445,8 @@ ul, ol { list-style: none; }
   font-size: 17px;
   line-height: 2;
   letter-spacing: .02em;
-  text-indent: -.4em;
+  /* 冒頭の「 を枠の外へ出して、2行目と文字の左端を揃える */
+  text-indent: -.55em;
 }
 .creed-motto-text::before { content: "「"; }
 .creed-motto-text::after { content: "」"; }
