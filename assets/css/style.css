@@ -717,17 +717,22 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
 .line-btn-sm img { width: 96px; height: 30px; }
 .line-btn-cap { font-size: 11px; color: var(--c-muted); white-space: nowrap; line-height: 1.3; }
 
-.others-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
+/* ラインはラベルとボタンだけ。用途の説明は書かない */
+.line-label {
+  display: block; font-size: 11.5px; color: var(--c-muted);
+  margin-bottom: 5px; line-height: 1.4;
+}
+.line-block { display: inline-block; }
+
+.others-actions { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
 .others-more {
   font-size: 14px; font-weight: 700; color: var(--c-primary-dark);
   text-decoration: none;
 }
 .others-more span { display: inline-block; margin-left: 5px; transition: transform .25s; }
 .others-more:hover span { transform: translateX(4px); }
-.others-note { font-size: 11.5px; color: var(--c-muted); margin-top: 10px; line-height: 1.6; }
 
-.contact-line-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
-.contact-line-note { font-size: 11.5px; color: var(--c-muted); line-height: 1.5; }
+.contact-line-row { margin-top: 14px; }
 
 .footer-line { margin-top: 16px; }
 .footer-line-label { font-size: 11.5px; color: #9dc4d6; margin-bottom: 6px; }
