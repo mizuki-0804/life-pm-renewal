@@ -10,8 +10,10 @@
   --c-primary: #1894be;
   --c-primary-dark: #12759a;
   --c-primary-deep: #0d5f7d;
-  --c-accent: #bd5d00;
-  --c-accent-dark: #9e4d00;
+  /* CTAは鮮やかなオレンジのまま。白文字だと薄く見えるので文字を濃くして読みやすさを確保 */
+  --c-accent: #ed7700;
+  --c-accent-dark: #d66a00;
+  --c-accent-ink: #2a1800;
   --c-yellow: #ffd400;
   --c-ink: #1c2830;
   --c-muted: #5f7079;
@@ -77,8 +79,8 @@ ul, ol { list-style: none; }
   transition: background-color .25s, color .25s, transform .2s, box-shadow .25s;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(13,95,125,.18); }
-.btn-accent { background: var(--c-accent); color: #fff; }
-.btn-accent:hover { background: var(--c-accent-dark); }
+.btn-accent { background: var(--c-accent); color: var(--c-accent-ink); }
+.btn-accent:hover { background: var(--c-accent-dark); color: var(--c-accent-ink); }
 .btn-primary { background: var(--c-primary); color: #fff; }
 .btn-primary:hover { background: var(--c-primary-dark); }
 .btn-ghost { border: 2px solid rgba(255,255,255,.85); color: #fff; }
@@ -677,5 +679,5 @@ ul, ol { list-style: none; }
     font-weight: 700; font-size: 14.5px; color: #fff; text-decoration: none;
   }
   .sticky-cta-tel { background: var(--c-primary-dark); }
-  .sticky-cta-form { background: var(--c-accent); }
+  .sticky-cta-form { background: var(--c-accent); color: var(--c-accent-ink); }
 }
