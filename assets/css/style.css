@@ -378,37 +378,81 @@ ul, ol { list-style: none; }
 .message-photo img { border-radius: 6px; box-shadow: 0 16px 40px rgba(13,95,125,.2); }
 .message-name { margin-top: 14px; font-weight: 700; font-size: 15px; text-align: center; }
 .message-text { margin-bottom: 28px; }
+/* 信念（白地）と社是（ブランド色地）を1枚の二層カードとして見せる */
 .creed {
-  background: #fff; border: 1px solid var(--c-border);
-  border-radius: 6px; padding: 24px 28px; margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 10px 28px rgba(13,95,125,.08);
 }
-.creed-heading {
-  font-weight: 700; color: var(--c-primary-dark);
-  letter-spacing: .2em; font-size: 14px; margin-bottom: 10px;
-}
-.creed-slogan {
-  font-size: 19px; font-weight: 700;
+.creed-belief { padding: 28px 32px 30px; }
+
+/* 見出しラベル: 短い縦線＋小さめの文字 */
+.creed-label {
+  position: relative;
+  padding-left: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .24em;
   color: var(--c-primary-dark);
-  letter-spacing: .06em;
-  margin-bottom: 20px;
-  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+.creed-label::before {
+  content: "";
+  position: absolute; left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 3px; height: 14px;
+  background: var(--c-primary);
+  border-radius: 2px;
+}
+.creed-label-light { color: #cfeaf6; }
+.creed-label-light::before { background: var(--c-yellow); }
+
+/* 信念: 番号を振って3か条であることを見せる */
+.creed-list { counter-reset: creed; }
+.creed-list li {
+  counter-increment: creed;
+  position: relative;
+  padding-left: 34px;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
   border-bottom: 1px solid var(--c-border);
 }
-.creed-list li {
-  position: relative; padding-left: 26px; font-weight: 500;
-  margin-bottom: 6px; font-size: 15.5px;
-}
+.creed-list li:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
 .creed-list li::before {
-  content: "一"; position: absolute; left: 0;
-  color: var(--c-primary); font-weight: 700;
+  content: counter(creed);
+  position: absolute; left: 0; top: .35em;
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+  background: var(--c-surface);
+  color: var(--c-primary-dark);
+  border-radius: 50%;
+  font-size: 12px; font-weight: 700;
+  line-height: 1;
 }
+
+/* 社是: 下段をブランド色で塗って別格に見せる */
 .creed-motto {
-  
-  font-size: 16px; line-height: 1.9;
-  padding-left: 20px; border-left: 3px solid var(--c-primary);
-  margin-bottom: 28px; color: var(--c-primary-deep);
+  background: linear-gradient(120deg, var(--c-primary-deep) 0%, var(--c-primary-dark) 100%);
+  color: #fff;
+  padding: 28px 32px 30px;
 }
-.creed-motto cite { display: block; font-style: normal; font-size: 13px; color: var(--c-muted); margin-top: 8px; }
+.creed-motto-text {
+  font-size: 17px;
+  line-height: 2;
+  letter-spacing: .02em;
+  text-indent: -.4em;
+}
+.creed-motto-text::before { content: "「"; }
+.creed-motto-text::after { content: "」"; }
+@media (max-width: 767px) {
+  .creed-belief, .creed-motto { padding: 24px 22px; }
+  .creed-motto-text { font-size: 16px; line-height: 1.95; }
+}
 @media (max-width: 767px) {
   .message { padding: 56px 0; }
   .message-inner { grid-template-columns: 1fr; gap: 32px; }

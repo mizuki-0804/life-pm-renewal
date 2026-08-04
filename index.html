@@ -11,7 +11,7 @@
 <!-- 源ノ角ゴシック(Google FontsではNoto Sans JPとして配信)1書体に統一 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <!-- 制作中はCSS更新が確実に反映されるようv=を都度上げる -->
-<link rel="stylesheet" href="assets/css/style.css?v=20260804m">
+<link rel="stylesheet" href="assets/css/style.css?v=20260804n">
 <!-- JSが動く環境でだけ登場アニメーションを有効にする -->
 <script>document.documentElement.className += ' js';</script>
 </head>
@@ -127,20 +127,21 @@
       <p class="section-eyebrow">Message</p>
       <h2 class="section-title">建てて終わり、<br>売って終わりにしない。</h2>
       <p class="message-text">賃貸経営は、契約書を交わした日から始まります。私たちが見ているのはその日ではなく、十年後二十年後にオーナー様の手元へいくら残るかです。だから、売りやすい物件ではなく、貸し続けられる物件を企画します。取引が終わってからのほうが、私たちの仕事は長い。</p>
+      <!-- 信念と社是は正式な文言。一字も変えない。 -->
       <div class="creed">
-        <p class="creed-heading">スローガン</p>
-        <p class="creed-slogan">人と街のチカラに</p>
-        <p class="creed-heading">信念</p>
-        <ul class="creed-list">
-          <li>正しい事を正しいと言えること</li>
-          <li>世間の常識と組織の常識が一致していること</li>
-          <li>ひたむきで誠実に働いた者がきちんと評価されること</li>
-        </ul>
+        <div class="creed-belief">
+          <p class="creed-label">信念</p>
+          <ol class="creed-list">
+            <li>正しい事を正しいと言えること</li>
+            <li>世間の常識と組織の常識が一致していること</li>
+            <li>ひたむきで誠実に働いた者がきちんと評価されること</li>
+          </ol>
+        </div>
+        <blockquote class="creed-motto">
+          <p class="creed-label creed-label-light">社是</p>
+          <p class="creed-motto-text">仕事はお客様のために行い、常に誠実で前向きに構え、正しいことを行い人々の生活の向上のための力となる。</p>
+        </blockquote>
       </div>
-      <blockquote class="creed-motto">
-        仕事はお客様のために行い、常に誠実で前向きに構え、<br class="pc-only">正しいことを行い人々の生活の向上のための力となる。
-        <cite>― 社是</cite>
-      </blockquote>
       <a href="#company" class="btn btn-primary">会社情報へ</a>
     </div>
   </div>
@@ -428,6 +429,6 @@
   <a href="#contact" class="sticky-cta-form">無料相談フォーム</a>
 </div>
 
-<script src="assets/js/main.js?v=20260804m"></script>
+<script src="assets/js/main.js?v=20260804n"></script>
 </body>
 </html>
