@@ -264,6 +264,107 @@ ul, ol { list-style: none; }
 }
 
 /* ============================================
+   対象者別の入口
+   ============================================ */
+.audience { padding: 50px 0 46px; }
+.audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.aud-card {
+  display: flex; flex-direction: column; gap: 8px;
+  background: #fff; border: 1px solid var(--c-border); border-radius: 4px;
+  padding: 26px 22px 22px; text-decoration: none; color: var(--c-ink);
+  position: relative; overflow: hidden;
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+}
+.aud-card::before {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: 100%; height: 3px; background: var(--c-primary);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .35s cubic-bezier(.22,.61,.36,1);
+}
+.aud-card:hover { box-shadow: 0 12px 28px rgba(13,95,125,.14); transform: translateY(-4px); border-color: var(--c-primary); }
+.aud-card:hover::before { transform: scaleX(1); }
+.aud-icon {
+  display: grid; place-items: center;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--c-surface); color: var(--c-primary); margin-bottom: 4px;
+}
+.aud-icon svg { width: 30px; height: 30px; display: block; }
+.aud-label { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--c-primary); }
+.aud-card h3 { font-size: 17px; font-weight: 700; line-height: 1.5; color: var(--c-primary-deep); }
+.aud-text { font-size: 13px; color: var(--c-muted); flex: 1; }
+.aud-more { font-size: 13.5px; font-weight: 700; color: var(--c-primary-dark); }
+.aud-more span { display: inline-block; margin-left: 5px; transition: transform .25s; }
+.aud-card:hover .aud-more span { transform: translateX(4px); }
+@media (max-width: 900px) { .audience-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .audience { padding: 36px 0 32px; } .audience-grid { grid-template-columns: 1fr; } }
+
+/* ============================================
+   お客様・オーナーの声（素材待ち）
+   ============================================ */
+.voices { padding: 54px 0; background: var(--c-surface); }
+.voices-notice {
+  background: #fff8e1; border: 1px solid #f0d98a; border-left: 4px solid #e8b923;
+  border-radius: 4px; padding: 18px 22px; margin-bottom: 26px;
+}
+.voices-notice-title { font-weight: 700; color: #7a5c00; margin-bottom: 5px; font-size: 14px; }
+.voices-notice p { font-size: 13px; color: #6b5a2a; }
+.voices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.voice-card {
+  background: #fff; border: 1px solid var(--c-border); border-radius: 4px;
+  padding: 24px 22px; min-height: 130px;
+}
+.voice-card.is-empty {
+  border-style: dashed; background: #fbfdfe;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.voice-meta { font-size: 11px; font-weight: 700; letter-spacing: .1em; color: #9aa8b0; margin-bottom: 6px; }
+.voice-text { font-size: 14px; color: var(--c-muted); }
+@media (max-width: 767px) { .voices { padding: 40px 0; } .voices-grid { grid-template-columns: 1fr; } }
+
+/* ============================================
+   よくある質問
+   ============================================ */
+.faq { padding: 54px 0; }
+.faq-list { display: grid; gap: 10px; }
+.faq-item { border: 1px solid var(--c-border); border-radius: 4px; background: #fff; overflow: hidden; }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 17px 52px 17px 20px; position: relative;
+  font-size: 15.5px; font-weight: 500; line-height: 1.6;
+  transition: background-color .2s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before {
+  content: "Q"; flex: none;
+  width: 24px; height: 24px; display: grid; place-items: center;
+  background: var(--c-primary); color: #fff;
+  border-radius: 50%; font-size: 12px; font-weight: 700; line-height: 1;
+  margin-top: 2px;
+}
+.faq-item summary::after {
+  content: ""; position: absolute; right: 22px; top: 50%;
+  width: 11px; height: 11px; margin-top: -6px;
+  border-right: 2px solid var(--c-primary); border-bottom: 2px solid var(--c-primary);
+  transform: rotate(45deg); transition: transform .25s;
+}
+.faq-item[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.faq-item summary:hover { background: var(--c-surface); }
+.faq-a { padding: 0 20px 20px 56px; }
+.faq-a p { font-size: 14px; color: var(--c-muted); }
+.faq-todo {
+  display: inline-block; background: #fff2cc; color: #7a5c00;
+  border: 1px dashed #d9b64a; border-radius: 3px;
+  padding: 1px 8px; margin-right: 6px; font-size: 12.5px;
+}
+.faq-note { font-size: 12px; color: var(--c-muted); margin-top: 16px; }
+@media (max-width: 767px) {
+  .faq { padding: 40px 0; }
+  .faq-item summary { font-size: 14.5px; padding: 15px 44px 15px 16px; }
+  .faq-a { padding: 0 16px 18px 48px; }
+}
+
+/* ============================================
    アイコン数字ボックス
    ============================================ */
 .numbers { padding: 34px 0 40px; }

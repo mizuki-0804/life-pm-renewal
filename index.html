@@ -10,8 +10,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- 源ノ角ゴシック(Google FontsではNoto Sans JPとして配信)1書体に統一 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- OGP（SNS・チャットで共有された時の見え方） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社Life">
+<meta property="og:title" content="株式会社Life｜福岡・新宮町の不動産賃貸管理・不動産投資・新築プランニング">
+<meta property="og:description" content="土地の企画から建築、入居付け、日々の賃貸管理、そして売却まで一社で担う収益不動産の会社です。管理替えのご相談も承ります。">
+<meta property="og:url" content="https://life-pm.jp/">
+<meta property="og:image" content="https://life-pm.jp/assets/img/hero-city.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
 <!-- 制作中はCSS更新が確実に反映されるようv=を都度上げる -->
-<link rel="stylesheet" href="assets/css/style.css?v=20260804t">
+<link rel="stylesheet" href="assets/css/style.css?v=20260804u">
 <!-- JSが動く環境でだけ登場アニメーションを有効にする -->
 <script>document.documentElement.className += ' js';</script>
 </head>
@@ -57,12 +67,12 @@
     <div class="container">
       <ul>
         <li><a href="index.html">HOME</a></li>
-        <li><a href="#message">会社情報</a></li>
-        <li><a href="#strength">当社について</a></li>
-        <li><a href="#support">当社がご提供できること</a></li>
-        <li><a href="#brand">新築プランニング</a></li>
-        <li><a href="#support">賃貸管理</a></li>
-        <li><a href="#others">ご入居者様へ</a></li>
+        <li><a href="#audience">はじめての方へ</a></li>
+        <li><a href="#reasons">選ばれる理由</a></li>
+        <li><a href="#support">事業内容</a></li>
+        <li><a href="#brand">実績・事例</a></li>
+        <li><a href="#message">Lifeについて</a></li>
+        <li><a href="#faq">よくある質問</a></li>
         <li><a href="#contact">お問合せ</a></li>
       </ul>
     </div>
@@ -129,6 +139,44 @@
   </div>
 </section>
 
+<!-- ============ 対象者別の入口 ============ -->
+<section class="audience" id="audience">
+  <div class="container">
+    <h2 class="sec-title reveal">どのお立場の方ですか</h2>
+    <p class="sec-lead reveal">お探しの内容によって、ご案内する窓口が違います。あてはまるものをお選びください。</p>
+    <div class="audience-grid">
+      <a href="#support" class="aud-card reveal">
+        <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34V17l14-9 14 9v17"/><path d="M3 34h34"/><path d="M16 34v-9h8v9"/><path d="M20 3v5"/></svg></span>
+        <p class="aud-label">オーナー・投資検討者の方</p>
+        <h3>収益物件を買いたい・建てたい</h3>
+        <p class="aud-text">利回りの根拠、返済後に残る額、出口までの見通しをご説明します。</p>
+        <span class="aud-more">投資・新築のご案内<span>›</span></span>
+      </a>
+      <a href="#reasons" class="aud-card reveal">
+        <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34V12a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v22"/><path d="M5 34h30"/><path d="M14 17h5M14 24h5M25 17h2M25 24h2"/><path d="M17 34v-5h6v5"/></svg></span>
+        <p class="aud-label">管理を相談したい方</p>
+        <h3>いまの管理会社に不満がある</h3>
+        <p class="aud-text">空室が埋まらない、修繕費が読めない、連絡しても動かない。管理は途中で変えられます。</p>
+        <span class="aud-more">管理の考え方を見る<span>›</span></span>
+      </a>
+      <a href="#others" class="aud-card reveal">
+        <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18l14-10 14 10"/><path d="M9 16v18h22V16"/><path d="M17 34V23h6v11"/><circle cx="20" cy="15" r="0"/></svg></span>
+        <p class="aud-label">ご入居者様</p>
+        <h3>Lifeの管理物件にお住まいの方</h3>
+        <p class="aud-text">設備の不具合、ご入居中のルール、退去のお手続き。LINEでも受け付けています。</p>
+        <span class="aud-more">ご入居者様のご案内<span>›</span></span>
+      </a>
+      <a href="#others" class="aud-card reveal">
+        <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="30" height="22" rx="2"/><path d="M5 17h30"/><path d="M12 6v6M28 6v6"/><path d="M12 24h8"/></svg></span>
+        <p class="aud-label">仲介会社様</p>
+        <h3>空室情報をお探しの方</h3>
+        <p class="aud-text">当社管理物件の空室一覧をご確認いただけます。図面・条件のお問い合わせも承ります。</p>
+        <span class="aud-more">空室一覧を見る<span>›</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ アイコン数字ボックス ============ -->
 <section class="numbers" id="numbers">
   <div class="container numbers-grid">
@@ -167,100 +215,6 @@
     <span class="reg-badge">福岡県知事<br>免許</span>
     <p class="reg-text">Lifeは<em>賃貸住宅管理業者</em>および<em>宅地建物取引業者</em>として登録された会社です</p>
     <p class="reg-note">賃貸住宅管理業者 国土交通大臣(1)第002512号／宅地建物取引業者 福岡県知事(2)第19525号</p>
-  </div>
-</section>
-
-<!-- ============ 管理替えバナー ============ -->
-<section class="pickup-banner">
-  <div class="container pickup-inner">
-    <div class="pickup-text">
-      <h2 class="pickup-title">賃貸アパート・マンションの<br class="sp-only">管理、承ります！</h2>
-      <p class="pickup-tel-row">
-        <a href="tel:0927190322" class="pickup-tel">092-719-0322</a>
-        <span class="pickup-hours">受付時間 9:30〜18:00　定休日 土・日・祝</span>
-      </p>
-    </div>
-    <div class="pickup-side">
-      <img src="assets/img/tenpo.jpg" alt="株式会社Life 本店" class="pickup-photo">
-      <a href="#contact" class="btn btn-yellow">詳しくはこちらから<span>›</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 代表挨拶 ============ -->
-<section class="message" id="message">
-  <div class="container message-inner">
-    <div class="message-photo reveal">
-      <img src="assets/img/daihyo.jpg" alt="株式会社Life 代表取締役 内村優介" loading="lazy">
-      <div class="message-profile">
-        <p class="message-role">代表取締役</p>
-        <p class="message-name">内村 優介</p>
-        <ul class="message-career">
-          <li>福岡県糟屋郡新宮町に本店を置く</li>
-          <li>平成30年　株式会社Life 設立</li>
-          <li>令和　　　飯塚店を開設</li>
-          <li>宅地建物取引業／賃貸住宅管理業 登録</li>
-        </ul>
-      </div>
-    </div>
-    <div class="message-body reveal">
-      <h2 class="message-title">建てて終わり、売って終わりにしない</h2>
-      <p class="message-catch">Lifeは、土地の企画から建物の設計、入居付け、<br class="pc-only">日々の運営までを一社で担う会社です。</p>
-      <p class="message-text">賃貸経営は、契約書を交わした日から始まります。私たちが見ているのはその日ではなく、<mark>十年後二十年後にオーナー様の手元へいくら残るか</mark>です。だから、売りやすい物件ではなく、貸し続けられる物件を企画します。取引が終わってからのほうが、私たちの仕事は長い。</p>
-      <p class="message-text">建ててから工夫できることは、そう多くありません。どの街の、どの通りに、何平米を何戸つくるか。この判断が家賃を決め、家賃が利回りを決めます。だからLifeは、<mark>数字が決まる最初の段階から</mark>関わります。</p>
-      <a href="#strength" class="btn btn-primary">当社についてへ<span>›</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 新着情報 ============ -->
-<section class="news" id="news">
-  <div class="container">
-    <h2 class="sec-title reveal">新着情報</h2>
-    <ul class="news-list">
-      <li class="reveal"><a href="#">
-        <div class="news-body"><p class="news-date">2025年03月<span class="news-new">NEW</span></p>
-        <p class="news-text">【新築アパート「Klang（クラン）」が竣工しました】</p></div>
-        <img src="assets/img/bukken-klang.jpg" alt="" loading="lazy"></a></li>
-      <li class="reveal"><a href="#">
-        <div class="news-body"><p class="news-date">2025年03月</p>
-        <p class="news-text">【新築アパート「Taurus（トーラス）」が竣工しました】</p></div>
-        <img src="assets/img/bukken-taurus.jpg" alt="" loading="lazy"></a></li>
-      <li class="reveal"><a href="#">
-        <div class="news-body"><p class="news-date">2025年03月</p>
-        <p class="news-text">【「セレーナ福津」が竣工しました】</p></div>
-        <img src="assets/img/bukken-serena-fukutsu.jpg" alt="" loading="lazy"></a></li>
-      <li class="reveal"><a href="#">
-        <div class="news-body"><p class="news-date">2024年08月</p>
-        <p class="news-text">【新築アパート「niko（ニコ）」「Onesta（オネスタ）」が竣工しました】</p></div>
-        <img src="assets/img/bukken-niko.jpg" alt="" loading="lazy"></a></li>
-    </ul>
-    <div class="center-cta"><a href="#" class="btn btn-primary">新着情報一覧へ<span>›</span></a></div>
-  </div>
-</section>
-
-<!-- ============ 強み ============ -->
-<section class="strength" id="strength">
-  <div class="container">
-    <h2 class="sec-title reveal">株式会社Lifeの強み</h2>
-
-    <div class="feature-row reveal">
-      <div class="feature-photo"><img src="assets/img/office.jpg" alt="株式会社Life 店内" loading="lazy"></div>
-      <div class="feature-card">
-        <h3>当社の特徴</h3>
-        <p>土地の仕入れ、建物の企画、販売、入居付け、日々の運営、そして売却。すべて自社で担います。「そこは施工会社に聞いてください」と言われることがありません。</p>
-        <a href="#support" class="btn btn-yellow">当社の特徴へ<span>›</span></a>
-      </div>
-    </div>
-
-    <div class="feature-row feature-row-rev reveal">
-      <div class="feature-photo"><img src="assets/img/bukken-onesta.jpg" alt="Lifeが企画した物件" loading="lazy"></div>
-      <div class="feature-card">
-        <h3>当社が選ばれる5つの理由</h3>
-        <p>賃料の決め方、募集の広げ方、入居審査、工事の発注、退去を止める動き。管理で実際にやっていることを5つに分けてご説明します。</p>
-        <a href="#reasons" class="btn btn-yellow">選ばれる5つの理由へ<span>›</span></a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -357,6 +311,148 @@
   </div>
 </section>
 
+<!-- ============ 代表挨拶 ============ -->
+<section class="message" id="message">
+  <div class="container message-inner">
+    <div class="message-photo reveal">
+      <img src="assets/img/daihyo.jpg" alt="株式会社Life 代表取締役 内村優介" loading="lazy">
+      <div class="message-profile">
+        <p class="message-role">代表取締役</p>
+        <p class="message-name">内村 優介</p>
+        <ul class="message-career">
+          <li>福岡県糟屋郡新宮町に本店を置く</li>
+          <li>平成30年　株式会社Life 設立</li>
+          <li>令和　　　飯塚店を開設</li>
+          <li>宅地建物取引業／賃貸住宅管理業 登録</li>
+        </ul>
+      </div>
+    </div>
+    <div class="message-body reveal">
+      <h2 class="message-title">建てて終わり、売って終わりにしない</h2>
+      <p class="message-catch">Lifeは、土地の企画から建物の設計、入居付け、<br class="pc-only">日々の運営までを一社で担う会社です。</p>
+      <p class="message-text">賃貸経営は、契約書を交わした日から始まります。私たちが見ているのはその日ではなく、<mark>十年後二十年後にオーナー様の手元へいくら残るか</mark>です。だから、売りやすい物件ではなく、貸し続けられる物件を企画します。取引が終わってからのほうが、私たちの仕事は長い。</p>
+      <p class="message-text">建ててから工夫できることは、そう多くありません。どの街の、どの通りに、何平米を何戸つくるか。この判断が家賃を決め、家賃が利回りを決めます。だからLifeは、<mark>数字が決まる最初の段階から</mark>関わります。</p>
+      <a href="#strength" class="btn btn-primary">当社についてへ<span>›</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 強み ============ -->
+<section class="strength" id="strength">
+  <div class="container">
+    <h2 class="sec-title reveal">株式会社Lifeの強み</h2>
+
+    <div class="feature-row reveal">
+      <div class="feature-photo"><img src="assets/img/office.jpg" alt="株式会社Life 店内" loading="lazy"></div>
+      <div class="feature-card">
+        <h3>当社の特徴</h3>
+        <p>土地の仕入れ、建物の企画、販売、入居付け、日々の運営、そして売却。すべて自社で担います。「そこは施工会社に聞いてください」と言われることがありません。</p>
+        <a href="#support" class="btn btn-yellow">当社の特徴へ<span>›</span></a>
+      </div>
+    </div>
+
+    <div class="feature-row feature-row-rev reveal">
+      <div class="feature-photo"><img src="assets/img/bukken-onesta.jpg" alt="Lifeが企画した物件" loading="lazy"></div>
+      <div class="feature-card">
+        <h3>当社が選ばれる5つの理由</h3>
+        <p>賃料の決め方、募集の広げ方、入居審査、工事の発注、退去を止める動き。管理で実際にやっていることを5つに分けてご説明します。</p>
+        <a href="#reasons" class="btn btn-yellow">選ばれる5つの理由へ<span>›</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お客様・オーナーの声 ============ -->
+<section class="voices" id="voices">
+  <div class="container">
+    <h2 class="sec-title reveal">お客様・オーナー様の声</h2>
+    <p class="sec-lead reveal">Lifeにお任せいただいているオーナー様に、率直なところを伺いました。</p>
+    <div class="voices-notice reveal">
+      <p class="voices-notice-title">【素材待ち】このセクションは掲載枠のみ用意しています</p>
+      <p>オーナー様への取材と掲載許諾をいただき次第、実際のお声に差し替えます。事実でない内容を仮に置くことはいたしません。取材の際は、お名前（イニシャル可）・ご所有物件・お困りだったこと・依頼後に変わったことの4点を伺います。</p>
+    </div>
+    <div class="voices-grid">
+      <div class="voice-card is-empty reveal">
+        <p class="voice-meta">取材予定</p>
+        <p class="voice-text">管理替えをご検討されたオーナー様</p>
+      </div>
+      <div class="voice-card is-empty reveal">
+        <p class="voice-meta">取材予定</p>
+        <p class="voice-text">新築アパートを企画されたオーナー様</p>
+      </div>
+      <div class="voice-card is-empty reveal">
+        <p class="voice-meta">取材予定</p>
+        <p class="voice-text">相続をきっかけにご相談いただいたオーナー様</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ よくある質問 ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="sec-title reveal">よくあるご質問</h2>
+    <p class="sec-lead reveal">オーナー様から実際にいただくご質問をまとめました。</p>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>いまの管理会社を、途中で変えることはできますか。</summary>
+        <div class="faq-a"><p>できます。多くの管理委託契約には解約予告期間（3か月前など）が定められていますので、まずお手元の契約書をご確認ください。現在の管理会社とのやり取りや入居者様への通知も、当社で段取りいたします。</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>対応しているエリアを教えてください。</summary>
+        <div class="faq-a"><p>本店を福岡県糟屋郡新宮町、飯塚店を福岡県飯塚市に置いています。<span class="faq-todo">［要確認：対応エリアの範囲］</span></p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>管理をお願いすると、費用はどれくらいかかりますか。</summary>
+        <div class="faq-a"><p><span class="faq-todo">［要確認：管理手数料の料率・初期費用の有無］</span>物件の規模や戸数、ご依頼いただく業務の範囲によって変わりますので、現地を拝見したうえでお見積りいたします。</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>設備のトラブルは、夜間や休日でも対応してもらえますか。</summary>
+        <div class="faq-a"><p>設備トラブルの受付は24時間体制です。緊急性のあるもの（水漏れ、鍵、給湯器など）は、受付後すぐに手配いたします。対象は当社が管理を受託している物件です。</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>一棟だけでも、管理をお願いできますか。</summary>
+        <div class="faq-a"><p><span class="faq-todo">［要確認：受託の最低条件（棟数・戸数）］</span></p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>土地を持っていないのですが、新築の相談はできますか。</summary>
+        <div class="faq-a"><p><span class="faq-todo">［要確認：土地の紹介可否・提携先の有無］</span>Lifeは土地の企画段階から関わり、収支から逆算して間取りと戸数を決めています。</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>相談したら、必ず契約しないといけませんか。</summary>
+        <div class="faq-a"><p>そのようなことはありません。ご相談は無料です。相場と残債、税金を並べたうえで「いまは動かないほうがよい」とお伝えすることもあります。売り込みはいたしません。</p></div>
+      </details>
+    </div>
+    <p class="faq-note">※［要確認］の項目は、内容をご確認いただき次第、正式な回答に差し替えます。</p>
+  </div>
+</section>
+
+<!-- ============ 新着情報 ============ -->
+<section class="news" id="news">
+  <div class="container">
+    <h2 class="sec-title reveal">新着情報</h2>
+    <ul class="news-list">
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2025年03月<span class="news-new">NEW</span></p>
+        <p class="news-text">【新築アパート「Klang（クラン）」が竣工しました】</p></div>
+        <img src="assets/img/bukken-klang.jpg" alt="" loading="lazy"></a></li>
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2025年03月</p>
+        <p class="news-text">【新築アパート「Taurus（トーラス）」が竣工しました】</p></div>
+        <img src="assets/img/bukken-taurus.jpg" alt="" loading="lazy"></a></li>
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2025年03月</p>
+        <p class="news-text">【「セレーナ福津」が竣工しました】</p></div>
+        <img src="assets/img/bukken-serena-fukutsu.jpg" alt="" loading="lazy"></a></li>
+      <li class="reveal"><a href="#">
+        <div class="news-body"><p class="news-date">2024年08月</p>
+        <p class="news-text">【新築アパート「niko（ニコ）」「Onesta（オネスタ）」が竣工しました】</p></div>
+        <img src="assets/img/bukken-niko.jpg" alt="" loading="lazy"></a></li>
+    </ul>
+    <div class="center-cta"><a href="#" class="btn btn-primary">新着情報一覧へ<span>›</span></a></div>
+  </div>
+</section>
+
 <!-- ============ 会社情報 ============ -->
 <section class="company" id="company">
   <div class="container">
@@ -437,6 +533,23 @@
   </div>
 </section>
 
+<!-- ============ 管理替えバナー ============ -->
+<section class="pickup-banner">
+  <div class="container pickup-inner">
+    <div class="pickup-text">
+      <h2 class="pickup-title">賃貸アパート・マンションの<br class="sp-only">管理、承ります！</h2>
+      <p class="pickup-tel-row">
+        <a href="tel:0927190322" class="pickup-tel">092-719-0322</a>
+        <span class="pickup-hours">受付時間 9:30〜18:00　定休日 土・日・祝</span>
+      </p>
+    </div>
+    <div class="pickup-side">
+      <img src="assets/img/tenpo.jpg" alt="株式会社Life 本店" class="pickup-photo">
+      <a href="#contact" class="btn btn-yellow">詳しくはこちらから<span>›</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ お問い合わせ ============ -->
 <section class="contact" id="contact">
   <div class="container">
@@ -485,7 +598,7 @@
         <p class="footer-nav-head">当社について</p>
         <ul>
           <li><a href="#message">代表挨拶</a></li>
-          <li><a href="#strength">当社の特徴</a></li>
+          <li><a href="#strength">Lifeの管理の考え方</a></li>
           <li><a href="#reasons">選ばれる5つの理由</a></li>
           <li><a href="#company">会社情報</a></li>
         </ul>
@@ -502,6 +615,8 @@
       <div class="footer-nav-col">
         <p class="footer-nav-head">その他</p>
         <ul>
+          <li><a href="#voices">オーナー様の声</a></li>
+          <li><a href="#faq">よくある質問</a></li>
           <li><a href="#news">新着情報</a></li>
           <li><a href="#others">ご入居者様へ</a></li>
           <li><a href="#others">仲介会社様へ</a></li>
@@ -519,6 +634,54 @@
   <a href="#contact" class="sticky-cta-form">無料相談フォーム</a>
 </div>
 
-<script src="assets/js/main.js?v=20260804t"></script>
+<script src="assets/js/main.js?v=20260804u"></script>
+
+<!-- 構造化データ：検索結果での会社情報・FAQの表示用 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "株式会社Life",
+  "url": "https://life-pm.jp/",
+  "telephone": "092-719-0322",
+  "faxNumber": "092-719-0323",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "811-0119",
+    "addressRegion": "福岡県",
+    "addressLocality": "糟屋郡新宮町",
+    "streetAddress": "中央駅前1丁目5-1",
+    "addressCountry": "JP"
+  },
+  "founder": { "@type": "Person", "name": "内村 優介" },
+  "foundingDate": "2018-06-19",
+  "openingHours": "Mo-Fr 09:30-18:00",
+  "areaServed": "福岡県",
+  "description": "土地の企画から建築、入居付け、日々の賃貸管理、売却まで一社で担う収益不動産の会社です。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "いまの管理会社を、途中で変えることはできますか。",
+      "acceptedAnswer": { "@type": "Answer", "text": "できます。多くの管理委託契約には解約予告期間が定められていますので、まずお手元の契約書をご確認ください。現在の管理会社とのやり取りや入居者様への通知も、当社で段取りいたします。" }
+    },
+    {
+      "@type": "Question",
+      "name": "設備のトラブルは、夜間や休日でも対応してもらえますか。",
+      "acceptedAnswer": { "@type": "Answer", "text": "設備トラブルの受付は24時間体制です。緊急性のあるものは受付後すぐに手配いたします。対象は当社が管理を受託している物件です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "相談したら、必ず契約しないといけませんか。",
+      "acceptedAnswer": { "@type": "Answer", "text": "そのようなことはありません。ご相談は無料です。相場と残債、税金を並べたうえで「いまは動かないほうがよい」とお伝えすることもあります。" }
+    }
+  ]
+}
+</script>
 </body>
 </html>
