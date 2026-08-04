@@ -258,8 +258,12 @@ ul, ol { list-style: none; }
   .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
   .nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .cta-bar-label { display: none; }
-  .cta-bar-inner { gap: 6px; padding-top: 8px; padding-bottom: 8px; }
-  .cta-btn { font-size: 13px; padding: 10px 4px; }
+  /* 3つのボタンは文字数が違っても高さを揃える */
+  .cta-bar-inner { gap: 6px; padding-top: 8px; padding-bottom: 8px; align-items: stretch; }
+  .cta-btn {
+    font-size: 12px; padding: 10px 4px; letter-spacing: -.01em;
+    display: flex; align-items: center; justify-content: center;
+  }
   .cta-btn span { display: none; }
 }
 
