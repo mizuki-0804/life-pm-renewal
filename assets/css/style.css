@@ -205,7 +205,7 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("../img/slide.jpg") center / cover no-repeat;
+  background: url("../img/hero.jpg") center / cover no-repeat;
 }
 .hero-bg::after {
   content: "";
