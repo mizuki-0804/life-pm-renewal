@@ -156,6 +156,8 @@ ul { list-style: none; }
 
 @media (max-width: 1023px) {
   .header-top-inner { flex-direction: column; gap: 2px; align-items: flex-start; }
+  .header-tagline { display: none; }
+  .header-main-inner { gap: 12px; }
   .global-nav {
     display: none;
     position: absolute;
