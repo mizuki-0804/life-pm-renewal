@@ -45,14 +45,15 @@
         entry.target.classList.add('is-visible');
         revealObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    // 画面に入る手前で動き出すよう、判定範囲を下に広げておく
+    }, { threshold: 0, rootMargin: '0px 0px 12% 0px' });
 
-    revealTargets.forEach(function (el, i) {
+    revealTargets.forEach(function (el) {
       // 同じ並びのカードは少しずつ遅らせて出す
       var parent = el.parentElement;
       if (parent && parent.children.length > 1 && !el.style.transitionDelay) {
         var index = Array.prototype.indexOf.call(parent.children, el);
-        el.style.transitionDelay = Math.min(index, 5) * 0.09 + 's';
+        el.style.transitionDelay = Math.min(index, 3) * 0.07 + 's';
       }
       revealObserver.observe(el);
     });

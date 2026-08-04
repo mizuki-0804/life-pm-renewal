@@ -46,17 +46,19 @@ ul, ol { list-style: none; }
   .pc-only { display: none; }
 }
 
-/* ---------- スクロール連動アニメーション ---------- */
-.reveal {
+/* ---------- スクロール連動アニメーション ----------
+   JSが動く時だけ隠す。JSが失敗しても本文が消えないようにするため、
+   非表示の指定は html.js が付いている場合に限定する。 */
+.js .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+  transform: translateY(20px);
+  transition: opacity .55s cubic-bezier(.22,.61,.36,1), transform .55s cubic-bezier(.22,.61,.36,1);
 }
-.reveal.is-visible { opacity: 1; transform: none; }
+.js .reveal.is-visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+  .js .reveal { opacity: 1 !important; transform: none !important; transition: none; }
   .hero-bg { animation: none !important; }
 }
 
