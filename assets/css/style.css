@@ -588,6 +588,15 @@ ul, ol { list-style: none; }
   display: block; font-size: 25px; font-weight: 900;
   color: var(--c-primary-dark); letter-spacing: .02em;
 }
+.others-link {
+  margin-top: 14px; font-size: 17px; font-weight: 700;
+  color: var(--c-primary-dark);
+}
+.others-link span {
+  display: inline-block; margin-left: 8px;
+  transition: transform .25s;
+}
+.others-card:hover .others-link span { transform: translateX(5px); }
 @media (max-width: 767px) {
   .others { padding-bottom: 56px; }
   .others-grid { grid-template-columns: 1fr; }
