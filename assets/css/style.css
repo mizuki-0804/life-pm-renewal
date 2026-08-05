@@ -817,6 +817,43 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
 .footer-copy { text-align: center; font-size: 11.5px; padding: 14px 16px; border-top: 1px solid rgba(255,255,255,.14); }
 
 /* ============================================
+   下層ページ共通：パンくず・ページ見出し
+   ============================================ */
+.breadcrumb {
+  background: var(--c-surface); border-bottom: 1px solid var(--c-border);
+  font-size: 12.5px; color: var(--c-muted); padding: 10px 0;
+}
+.breadcrumb a { color: var(--c-primary-dark); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span { margin: 0 6px; color: #a9bcc4; }
+
+.page-header {
+  background: linear-gradient(120deg, var(--c-primary-deep) 0%, var(--c-primary) 130%);
+  color: #fff; padding: 34px 0 30px; text-align: center;
+}
+.page-header-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .28em; color: #b7dcea; }
+.page-header h1 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 700; letter-spacing: .1em; margin-top: 6px; }
+.page-header p { font-size: 13.5px; color: #cfe9f4; margin-top: 8px; }
+
+/* 下層ページの本文セクション（トップの中央寄せ見出しと区別し、左寄せの読み物として使う） */
+.doc-section { padding: 48px 0; }
+.doc-section + .doc-section { border-top: 1px solid var(--c-border); }
+.doc-h2 {
+  font-size: clamp(19px, 2.4vw, 24px); font-weight: 700;
+  color: var(--c-primary-dark); letter-spacing: .04em;
+  padding-left: 14px; border-left: 4px solid var(--c-primary);
+  margin-bottom: 20px;
+}
+.doc-body { max-width: 760px; }
+.doc-body p { margin-bottom: 14px; color: var(--c-ink); }
+.doc-list { max-width: 760px; }
+.doc-list li {
+  position: relative; padding-left: 18px; margin-bottom: 8px; font-size: 14.5px;
+}
+.doc-list li::before { content: "―"; position: absolute; left: 0; color: var(--c-primary); }
+@media (max-width: 767px) { .doc-section { padding: 36px 0; } }
+
+/* ============================================
    スマホ固定CTA
    ============================================ */
 .sticky-cta { display: none; }
