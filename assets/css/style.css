@@ -776,6 +776,20 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
 .footer-line { margin-top: 16px; }
 .footer-line-label { font-size: 11.5px; color: #9dc4d6; margin-bottom: 6px; }
 
+/* 入居者向けページ上部の告知バナー。説明文は書かず、表記とボタンだけ */
+.line-announce {
+  background: #eafcf1; border-top: 1px solid #b7ecc9; border-bottom: 1px solid #b7ecc9;
+  padding: 20px 0; text-align: center;
+}
+.line-announce .container { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.line-announce-label { font-size: 15px; font-weight: 700; color: #06a34c; letter-spacing: .03em; }
+.line-announce .line-btn img { width: 156px; height: 48px; }
+@media (max-width: 767px) {
+  .line-announce { padding: 16px 0; }
+  .line-announce-label { font-size: 13.5px; }
+  .line-announce .line-btn img { width: 130px; height: 40px; }
+}
+
 /* ============================================
    お問い合わせ
    ============================================ */
