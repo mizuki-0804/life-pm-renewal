@@ -393,25 +393,67 @@ ul, ol { list-style: none; }
 }
 
 /* ============================================
-   登録バナー（武蔵の「管理戸数No.1」帯）
+   一貫体制の帯（土地から出口まで自社で担う流れ）
    ============================================ */
-.reg-banner { background: var(--c-primary); color: #fff; }
-.reg-inner {
-  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
-  gap: 12px; padding-top: 18px; padding-bottom: 18px; text-align: center;
+.flow-banner {
+  background:
+    radial-gradient(900px 300px at 15% 0%, rgba(255,255,255,.14), transparent 62%),
+    linear-gradient(120deg, var(--c-primary-deep) 0%, var(--c-primary) 130%);
+  color: #fff;
+  padding: 34px 0 28px;
 }
-.reg-badge {
+.flow-lead {
+  text-align: center;
+  font-size: clamp(20px, 2.9vw, 31px);
+  font-weight: 700; letter-spacing: .05em; line-height: 1.5;
+}
+.flow-lead em {
+  font-style: normal;
+  background: linear-gradient(transparent 62%, rgba(255,225,0,.85) 62%);
+  padding: 0 .08em;
+}
+.flow-sub { text-align: center; font-size: 13.5px; color: #cfe9f4; margin-top: 6px; }
+
+.flow-steps {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 8px; margin: 24px 0 18px;
+}
+.flow-step {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 4px; padding: 18px 8px 14px;
+}
+/* 手順のあいだをつなぐ矢印 */
+.flow-step + .flow-step::before {
+  content: ""; position: absolute; left: -10px; top: 50%;
+  width: 7px; height: 7px; margin-top: -4px;
+  border-top: 2px solid rgba(255,255,255,.65);
+  border-right: 2px solid rgba(255,255,255,.65);
+  transform: rotate(45deg);
+}
+.flow-icon {
   display: grid; place-items: center;
-  width: 72px; height: 72px; border-radius: 50%;
+  width: 46px; height: 46px; border-radius: 50%;
   background: #fff; color: var(--c-primary-dark);
-  font-size: 11.5px; font-weight: 700; line-height: 1.35;
-  flex: none;
 }
-.reg-cross { font-size: 18px; opacity: .8; }
-.reg-text { font-size: clamp(16px, 2.1vw, 23px); font-weight: 700; letter-spacing: .03em; }
-.reg-text em { font-style: normal; color: var(--c-yellow); font-size: 1.16em; }
-.reg-note { width: 100%; font-size: 11px; color: #d3edf7; }
-@media (max-width: 767px) { .reg-inner { gap: 8px; } .reg-badge { width: 60px; height: 60px; font-size: 10.5px; } }
+.flow-icon svg { width: 26px; height: 26px; display: block; }
+.flow-no { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; color: var(--c-yellow); }
+.flow-name { font-size: 13px; font-weight: 700; letter-spacing: .02em; text-align: center; line-height: 1.4; }
+.flow-license { text-align: center; font-size: 11px; color: #b7dcea; }
+
+@media (max-width: 900px) {
+  .flow-steps { grid-template-columns: repeat(3, 1fr); gap: 8px 14px; }
+  .flow-step + .flow-step::before { display: none; }
+}
+@media (max-width: 480px) {
+  .flow-banner { padding: 26px 0 22px; }
+  .flow-steps { grid-template-columns: repeat(2, 1fr); }
+  .flow-icon { width: 40px; height: 40px; }
+  .flow-icon svg { width: 22px; height: 22px; }
+  .flow-name { font-size: 12px; }
+}
 
 /* ============================================
    管理替えバナー
