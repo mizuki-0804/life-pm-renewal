@@ -46,13 +46,47 @@ ul, ol { list-style: none; }
 
 /* ---------- 登場アニメーション（JS有効時のみ隠す） ---------- */
 .js .reveal {
-  opacity: 0; transform: translateY(18px);
-  transition: opacity .5s cubic-bezier(.22,.61,.36,1), transform .5s cubic-bezier(.22,.61,.36,1);
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .62s cubic-bezier(.22,.61,.36,1), transform .62s cubic-bezier(.22,.61,.36,1);
 }
 .js .reveal.is-visible { opacity: 1; transform: none; }
+
+/* 見出しの下線が伸びる。既定は表示で、動く時だけ隠す（JSが動かなくても線は出る） */
+.sec-title { position: relative; padding-bottom: 16px; }
+.sec-title::after {
+  content: ""; position: absolute; left: 50%; bottom: 0;
+  width: 46px; height: 3px; background: var(--c-primary);
+  transform: translateX(-50%) scaleX(1); transform-origin: center;
+  transition: transform .7s cubic-bezier(.22,.61,.36,1) .15s;
+}
+.js .sec-title.reveal:not(.is-visible)::after { transform: translateX(-50%) scaleX(0); }
+.sec-title-light::after { background: var(--c-yellow); }
+
+/* 下層ページの見出しは左の縦線が伸びる */
+.doc-h2 { position: relative; border-left: none; }
+.doc-h2::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px; background: var(--c-primary);
+  transform: scaleY(1); transform-origin: top;
+  transition: transform .55s cubic-bezier(.22,.61,.36,1) .1s;
+}
+.js .doc-h2.reveal:not(.is-visible)::before { transform: scaleY(0); }
+
+/* メインビジュアルはゆっくり寄っていく（静止画に見えないように） */
+@keyframes heroDrift {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+.hero-panel img { animation: heroDrift 20s ease-in-out infinite alternate; }
+.hero-panel:nth-child(2) img { animation-delay: -10s; }
+.hero-panel:hover img { animation-play-state: paused; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+  .sec-title::after { transform: translateX(-50%) scaleX(1) !important; transition: none; }
+  .doc-h2::before { transform: scaleY(1) !important; transition: none; }
+  .hero-panel img { animation: none !important; }
 }
 
 /* ---------- ボタン（武蔵と同じく右向き三角つき） ---------- */
