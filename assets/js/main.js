@@ -57,6 +57,12 @@
       }
       revealObserver.observe(el);
     });
+
+    // 安全装置：スクロールを検知できない見方（自動キャプチャ・印刷・
+    // 一部の読み上げ環境など）でも、しばらくしたら必ず出す
+    setTimeout(function () {
+      revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
+    }, 2500);
   }
 
   /* ---------- 数字のカウントアップ ---------- */
