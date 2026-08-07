@@ -965,3 +965,105 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
   .sticky-cta-tel { background: var(--c-primary-deep); color: #fff; }
   .sticky-cta-form { background: var(--c-yellow); color: #2b2300; }
 }
+
+/* ============================================
+   下層ページ共通コンポーネント
+   参考サイトから型を取り込む（既存life-pm.jpの構成は踏襲しない）
+   ・GLC        … 数字の見せ方（囲まず、罫線1本＋特大数字）
+   ・アイケンJP  … 主張見出し（センター・字間広め）＋写真の帯
+   ・アパックス  … 流れ（左に番号リスト／右に大きな写真と巨大数字）
+   ・大和財託    … サービス一覧（枠なし・写真小＋丸矢印）／文中マーカー
+   ・三和エステート… 事業カード（色ベタ＋写真のオフセット）
+   ============================================ */
+
+/* ---------- GLC型：数字 ---------- */
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin: 34px 0 8px; }
+.stat-item { border-top: 1px solid var(--c-border); padding-top: 15px; }
+.stat-label { font-size: 12.5px; color: var(--c-muted); letter-spacing: .04em; line-height: 1.6; }
+.stat-num {
+  font-size: clamp(30px, 4.2vw, 50px); font-weight: 700; color: var(--c-primary-deep);
+  line-height: 1.15; margin-top: 6px; letter-spacing: -.01em;
+}
+.stat-num .unit { font-size: .4em; margin-left: 3px; }
+.stat-note { font-size: 10.5px; color: #94a3ab; margin-top: 7px; line-height: 1.6; }
+@media (max-width: 767px) { .stat-row { grid-template-columns: 1fr; gap: 20px; } }
+
+/* ---------- アイケン型：主張見出し ---------- */
+.claim { text-align: center; max-width: 880px; margin: 0 auto; }
+.claim-eyebrow {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .3em;
+  color: var(--c-primary); margin-bottom: 14px;
+}
+.claim h2 {
+  font-size: clamp(19px, 2.7vw, 29px); font-weight: 700; line-height: 1.75;
+  letter-spacing: .05em; color: var(--c-primary-deep);
+}
+.claim p { font-size: 14.5px; color: var(--c-muted); line-height: 2.05; margin-top: 20px; }
+/* 大和財託型：文中マーカー */
+.mark { background: linear-gradient(transparent 62%, rgba(24,148,190,.24) 0); padding: 0 2px; font-weight: 500; }
+
+/* アイケン型：主張の下に置く写真の帯 */
+.photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; margin-top: 34px; }
+.photo-strip img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+@media (max-width: 767px) { .photo-strip { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---------- アパックス型：流れ ---------- */
+.flow2 { display: grid; grid-template-columns: minmax(0, 400px) 1fr; gap: 34px; align-items: start; margin-top: 30px; }
+.flow2-list { display: grid; gap: 9px; }
+.flow2-item {
+  display: flex; gap: 15px; align-items: flex-start; background: #fff;
+  border: 1px solid var(--c-border); border-radius: 3px; padding: 15px 18px;
+}
+.flow2-item .no {
+  flex: none; width: 26px; height: 26px; border-radius: 2px; margin-top: 2px;
+  background: var(--c-primary-deep); color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  display: grid; place-items: center;
+}
+.flow2-item h3 { font-size: 15px; font-weight: 700; color: var(--c-primary-deep); line-height: 1.6; }
+.flow2-item p { font-size: 13px; color: var(--c-muted); margin-top: 5px; line-height: 1.8; }
+.flow2-visual { position: relative; overflow: hidden; border-radius: 3px; align-self: stretch; min-height: 340px; }
+.flow2-visual img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; }
+.flow2-visual::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,95,125,.72) 0%, rgba(13,95,125,.12) 55%, transparent 100%);
+}
+.flow2-cap { position: absolute; left: 26px; bottom: 22px; z-index: 2; color: #fff; }
+.flow2-cap .big { font-size: clamp(44px, 6vw, 68px); font-weight: 700; line-height: 1; letter-spacing: -.02em; }
+.flow2-cap .en { font-size: 12px; letter-spacing: .12em; margin-top: 8px; display: flex; align-items: center; gap: 10px; }
+.flow2-cap .en::before { content: ""; width: 26px; height: 1px; background: rgba(255,255,255,.7); }
+@media (max-width: 900px) { .flow2 { grid-template-columns: 1fr; } .flow2-visual { min-height: 220px; } .flow2-visual img { min-height: 220px; } }
+
+/* ---------- 大和財託型：サービス一覧（枠なし） ---------- */
+.svc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 46px; margin-top: 32px; }
+.svc-item { display: grid; grid-template-columns: 118px 1fr; gap: 20px; align-items: start; text-decoration: none; color: inherit; }
+.svc-item img { width: 118px; height: 148px; object-fit: cover; border-radius: 2px; }
+.svc-head { display: flex; align-items: center; gap: 10px; }
+.svc-arrow {
+  flex: none; width: 21px; height: 21px; border-radius: 50%;
+  border: 1px solid var(--c-primary); color: var(--c-primary);
+  display: grid; place-items: center; font-size: 10px; line-height: 1;
+  transition: background-color .2s, color .2s;
+}
+.svc-item:hover .svc-arrow { background: var(--c-primary); color: #fff; }
+.svc-head h3 { font-size: 16.5px; font-weight: 700; color: var(--c-primary-deep); }
+.svc-item p { font-size: 13.5px; color: var(--c-muted); margin-top: 11px; line-height: 1.9; }
+.svc-meta { font-size: 12px; color: var(--c-primary-dark); font-weight: 700; margin-top: 10px; }
+@media (max-width: 860px) { .svc-list { grid-template-columns: 1fr; gap: 28px; } }
+@media (max-width: 420px) { .svc-item { grid-template-columns: 92px 1fr; gap: 14px; } .svc-item img { width: 92px; height: 118px; } }
+
+/* ---------- 三和型：色ベタ＋写真のオフセット事業カード ---------- */
+.duo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+.duo-card { position: relative; display: block; text-decoration: none; color: inherit; }
+.duo-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+.duo-tag {
+  position: absolute; left: 0; top: 26px; z-index: 2;
+  background: var(--c-primary-deep); color: #fff; padding: 15px 20px 13px; min-width: 172px;
+}
+.duo-tag .ja { font-size: 16px; font-weight: 700; line-height: 1.45; }
+.duo-tag .en { font-size: 10px; letter-spacing: .16em; color: #a9d7ea; margin-top: 5px; }
+.duo-card:nth-child(2) .duo-tag { background: var(--c-primary); }
+.duo-body { padding: 16px 2px 0; }
+.duo-body p { font-size: 13.5px; color: var(--c-muted); line-height: 1.9; }
+.duo-body .more { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 700; color: var(--c-primary-dark); }
+@media (max-width: 767px) { .duo-row { grid-template-columns: 1fr; gap: 26px; } }
