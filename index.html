@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- 制作中はCSS更新が確実に反映されるようv=を都度上げる -->
-<link rel="stylesheet" href="assets/css/style.css?v=20260807b">
+<link rel="stylesheet" href="assets/css/style.css?v=20260807c">
 <!-- JSが動く環境でだけ登場アニメーションを有効にする -->
 <script>document.documentElement.className += ' js';</script>
 <!-- structured-data -->
@@ -117,40 +117,37 @@
 <main>
 
 <!-- ============ メインビジュアル ============ -->
-<!-- ============ ファーストビュー（アパックスホーム型：青ベタ＋アーチ写真＋巨大英字マーキー） ============ -->
-<section class="fv">
-  <div class="container">
-    <div class="fv-arches">
-      <img src="assets/img/office.webp" alt="株式会社Life 店内" fetchpriority="high">
-      <img src="assets/img/bukken-klang.webp" alt="Lifeが企画した新築アパート" fetchpriority="high">
-      <img src="assets/img/rc-jugame.webp" alt="Lifeが企画した新築RCマンション" fetchpriority="high">
-      <img src="assets/img/tenpo.webp" alt="株式会社Life 本店" fetchpriority="high">
+<!-- ============ ファーストビュー（写真全面＋斜めのブランドパネル） ============ -->
+<section class="fv2">
+  <div class="fv2-bg">
+    <img src="assets/img/bukken-klang.webp" alt="Lifeが企画・管理する賃貸物件" fetchpriority="high">
+  </div>
+  <div class="fv2-stage">
+    <div class="fv2-panel">
+      <div class="fv2-panel-in">
+        <p class="fv2-eyebrow">FUKUOKA / SHINGU</p>
+        <h1>企画した会社が、そのまま管理する。<br><em>だから、話が途切れない。</em></h1>
+        <p class="fv2-sub">エリア調査・企画から売買、入居付け、日々の賃貸管理、そして出口まで。窓口はLifeひとつです。</p>
+      </div>
     </div>
   </div>
-  <div class="fv-marquee marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
-      <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
-    </div>
-  </div>
-  <div class="container">
-    <div class="fv-copy">
-      <h1>企画した会社が、そのまま管理する。<br><em>だから、話が途切れない。</em></h1>
-      <p>エリア調査・企画から売買、入居付け、日々の賃貸管理、そして出口まで。福岡でワンストップにご支援します。</p>
-    </div>
-    <div class="fv-cta">
-      <a href="#contact">
-        <span class="ic"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h24v16H10l-6 5z"/><path d="M10 14h12M10 19h8"/></svg></span>
-        <span class="tx">無料の投資相談<small>FREE CONSULTATION</small></span>
-      </a>
-      <a href="#contact">
-        <span class="ic"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M6 27V7a2 2 0 0 1 2-2h14l6 6v16a2 2 0 0 1-2 2z"/><path d="M22 5v6h6"/><path d="M12 18h9M12 22h6"/></svg></span>
-        <span class="tx">無料の管理相談<small>MANAGEMENT SUPPORT</small></span>
-      </a>
-      <a href="kushitsu/index.html">
-        <span class="ic"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M5 28V13l11-8 11 8v15"/><path d="M2 28h28"/><rect x="12" y="18" width="8" height="10"/></svg></span>
-        <span class="tx">空室物件情報<small>FOR AGENTS</small></span>
-      </a>
+  <div class="fv2-stats">
+    <div class="container fv2-stats-in">
+      <div class="fv2-stat">
+        <p class="lb">新築アパート 平均表面利回り</p>
+        <p class="nm"><span class="count" data-count="9.75" data-dec="2">0.00</span><span class="u">%</span></p>
+        <p class="nt">※2021年3月までの企画販売物件</p>
+      </div>
+      <div class="fv2-stat">
+        <p class="lb">新築RC 平均表面利回り</p>
+        <p class="nm"><span class="count" data-count="6.88" data-dec="2">0.00</span><span class="u">%</span></p>
+        <p class="nt">※2021年3月までの企画販売物件</p>
+      </div>
+      <div class="fv2-stat">
+        <p class="lb">企画・管理の累計実績</p>
+        <p class="nm"><span class="count" data-count="39">0</span><span class="u">棟</span></p>
+        <p class="nt">※木造32棟・RC造7棟</p>
+      </div>
     </div>
   </div>
 </section>
@@ -227,8 +224,8 @@
 <!-- アパックスホーム型：セクション区切りの巨大英字マーキー -->
 <div class="marquee marquee--ink" aria-hidden="true" style="padding:26px 0 0;">
   <div class="marquee-track">
-    <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
-    <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
+    <span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span><span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span>
+    <span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span><span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span>
   </div>
 </div>
 
@@ -708,7 +705,7 @@
   <a href="#contact" class="sticky-cta-form">無料相談フォーム</a>
 </div>
 
-<script src="assets/js/main.js?v=20260807b"></script>
+<script src="assets/js/main.js?v=20260807c"></script>
 
 <!-- 構造化データ：検索結果での会社情報・FAQの表示用 -->
 <script type="application/ld+json">
