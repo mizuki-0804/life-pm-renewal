@@ -1411,3 +1411,30 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
     transition: none !important; transform: none !important;
   }
 }
+
+/* --- 登場アニメの transform:none より後に効かせるための優先度合わせ --- */
+/* 登場アニメ用クラス(.reveal 系)を持つ要素は .is-visible で transform:none が
+   当たるため、ホバーの浮き上がりが打ち消される。同等以上の優先度で上書きする。 */
+.js .numcard.is-visible:hover      { transform: translateY(-6px); }
+.js .voice-card.is-visible:hover   { transform: translateY(-4px); }
+.js .brand-panel.is-visible:hover  { transform: translateY(-5px); }
+.js .feature-row.is-visible:hover  { transform: translateY(-4px); }
+.js .duo-card.is-visible:hover     { transform: translateY(-5px); }
+.js .stat-item.is-visible:hover    { transform: translateY(-4px); }
+.js .support-card.is-visible:hover { transform: translateY(-3px); }
+.js .work-card.is-visible:hover    { transform: translateY(-4px); }
+.js .others-card.is-visible:hover  { transform: translateY(-4px); }
+.js .aud-card.is-visible:hover     { transform: translateY(-4px); }
+.js .reason-item.is-visible:hover  { transform: translateY(-3px); }
+.js .contact-box.is-visible:hover  { transform: translateY(-3px); }
+.js .company-side.is-visible:hover,
+.js .company-main.is-visible:hover { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .numcard.is-visible:hover, .js .voice-card.is-visible:hover,
+  .js .brand-panel.is-visible:hover, .js .feature-row.is-visible:hover,
+  .js .duo-card.is-visible:hover, .js .stat-item.is-visible:hover,
+  .js .support-card.is-visible:hover, .js .work-card.is-visible:hover,
+  .js .others-card.is-visible:hover, .js .aud-card.is-visible:hover,
+  .js .reason-item.is-visible:hover, .js .contact-box.is-visible:hover { transform: none !important; }
+}
