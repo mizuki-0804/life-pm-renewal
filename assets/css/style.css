@@ -1076,20 +1076,26 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
    ・番号が写真にはみ出す理由カード
    ============================================ */
 
-/* ---------- 巨大英字ループマーキー ---------- */
-.marquee { overflow: hidden; width: 100%; }
-.marquee-track {
-  display: flex; width: max-content;
-  animation: marquee-slide 34s linear infinite;
+/* ---------- 実績ティッカー（Lifeが企画した物件名が細い帯を流れる） ---------- */
+.ticker { display: flex; align-items: stretch; background: var(--c-primary-deep); color: #fff; overflow: hidden; }
+.ticker-label {
+  flex: none; display: flex; align-items: center; gap: 9px;
+  background: var(--c-yellow); color: #2b2300;
+  font-size: 11px; font-weight: 700; letter-spacing: .16em;
+  padding: 0 18px; white-space: nowrap;
 }
-.marquee-track span {
-  font-size: clamp(46px, 9vw, 128px); font-weight: 700; line-height: 1;
-  letter-spacing: .01em; white-space: nowrap; padding-right: .35em;
-  color: rgba(255,255,255,.17);
+.ticker-label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--c-primary-deep); }
+.ticker-view { flex: 1; overflow: hidden; padding: 11px 0; }
+.ticker-track { display: flex; width: max-content; animation: ticker-slide 62s linear infinite; }
+.ticker-track span {
+  font-size: 12.5px; letter-spacing: .04em; white-space: nowrap; color: #cfe9f4;
+  padding: 0 16px; display: flex; align-items: center; gap: 16px;
 }
-.marquee--ink .marquee-track span { color: rgba(13,95,125,.07); }
-@keyframes marquee-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+.ticker-track span::after { content: ""; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.4); }
+@keyframes ticker-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+@media (max-width: 560px) { .ticker-label { font-size: 10px; padding: 0 12px; letter-spacing: .1em; } .ticker-track span { font-size: 11.5px; } }
 
 /* ---------- ファーストビュー（写真全面＋斜めのブランドパネル） ---------- */
 .fv2 { position: relative; overflow: hidden; background: var(--c-primary-deep); }
@@ -1101,23 +1107,24 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
   background: linear-gradient(102deg, rgba(10,72,96,.78) 0%, rgba(13,95,125,.46) 44%, rgba(13,95,125,.06) 76%);
 }
 
-.fv2-stage { position: relative; z-index: 2; min-height: clamp(392px, 56vh, 552px); display: flex; align-items: flex-end; }
+.fv2-stage { position: relative; z-index: 2; min-height: clamp(318px, 42vh, 430px); display: flex; align-items: flex-end; }
 .fv2-panel {
-  width: min(66%, 800px); color: #fff;
+  width: fit-content; max-width: 94%; color: #fff;
   background: linear-gradient(122deg, rgba(9,70,93,.95) 0%, rgba(18,117,154,.92) 100%);
   clip-path: polygon(0 0, 100% 0, calc(100% - 76px) 100%, 0 100%);
   animation: fv2-slide 1s cubic-bezier(.22,.61,.36,1) .15s both;
 }
 @keyframes fv2-slide { from { transform: translate(-46px, 26px); opacity: 0; } to { transform: none; opacity: 1; } }
-.fv2-panel-in { padding: 30px 110px 30px max(16px, (100vw - var(--container)) / 2 + 16px); }
+.fv2-panel-in { padding: 26px 104px 26px max(16px, (100vw - var(--container)) / 2 + 16px); }
+.fv2-copy { max-width: 470px; }
 .fv2-eyebrow {
   font-size: 11.5px; font-weight: 700; letter-spacing: .28em; color: var(--c-yellow);
   display: flex; align-items: center; gap: 11px; margin-bottom: 13px;
 }
 .fv2-eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--c-yellow); flex: none; }
-.fv2-panel h1 { font-size: clamp(21px, 3vw, 35px); font-weight: 700; line-height: 1.5; letter-spacing: .035em; }
+.fv2-panel h1 { font-size: clamp(20px, 2.5vw, 31px); font-weight: 700; line-height: 1.5; letter-spacing: .035em; }
 .fv2-panel h1 em { font-style: normal; color: var(--c-yellow); }
-.fv2-sub { font-size: 13px; line-height: 1.9; color: #d4ebf5; margin-top: 14px; max-width: 460px; }
+.fv2-sub { font-size: 12.5px; line-height: 1.85; color: #d4ebf5; margin-top: 12px; }
 
 /* FV直下の実績数字（囲まず、区切り線のみ） */
 .fv2-stats { position: relative; z-index: 2; background: #fff; border-bottom: 1px solid var(--c-border); }
@@ -1131,14 +1138,14 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
 
 @media (prefers-reduced-motion: reduce) { .fv2-bg img, .fv2-panel { animation: none; } }
 @media (max-width: 900px) {
-  .fv2-panel { width: 88%; clip-path: polygon(0 0, 100% 0, calc(100% - 44px) 100%, 0 100%); }
-  .fv2-panel-in { padding: 24px 66px 24px 16px; }
-  .fv2-stage { min-height: 330px; }
+  .fv2-panel { max-width: 92%; clip-path: polygon(0 0, 100% 0, calc(100% - 44px) 100%, 0 100%); }
+  .fv2-panel-in { padding: 22px 62px 22px 16px; }
+  .fv2-stage { min-height: 292px; }
 }
 @media (max-width: 640px) {
-  .fv2-panel { width: 100%; clip-path: none; }
-  .fv2-panel-in { padding: 22px 16px; }
-  .fv2-sub { max-width: none; }
+  .fv2-panel { width: 100%; max-width: none; clip-path: none; }
+  .fv2-panel-in { padding: 20px 16px; }
+  .fv2-copy { max-width: none; }
   .fv2-stats-in { grid-template-columns: 1fr; }
   .fv2-stat { border-left: none; border-top: 1px solid var(--c-border); padding: 13px 16px; }
   .fv2-stat:first-child { border-top: none; }

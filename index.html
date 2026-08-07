@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- 制作中はCSS更新が確実に反映されるようv=を都度上げる -->
-<link rel="stylesheet" href="assets/css/style.css?v=20260807d">
+<link rel="stylesheet" href="assets/css/style.css?v=20260807e">
 <!-- JSが動く環境でだけ登場アニメーションを有効にする -->
 <script>document.documentElement.className += ' js';</script>
 <!-- structured-data -->
@@ -125,9 +125,11 @@
   <div class="fv2-stage">
     <div class="fv2-panel">
       <div class="fv2-panel-in">
-        <p class="fv2-eyebrow">FUKUOKA / SHINGU</p>
-        <h1>企画した会社が、<br>そのまま管理する。<br><em>だから、話が途切れない。</em></h1>
-        <p class="fv2-sub">エリア調査・企画から売買、入居付け、日々の賃貸管理、そして出口まで。窓口はLifeひとつです。</p>
+        <div class="fv2-copy">
+          <p class="fv2-eyebrow">FUKUOKA / SHINGU</p>
+          <h1>企画した会社が、<br>そのまま管理する。<br><em>だから、話が途切れない。</em></h1>
+          <p class="fv2-sub">エリア調査・企画から売買、入居付け、日々の賃貸管理、そして出口まで。窓口はLifeひとつです。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -151,6 +153,15 @@
     </div>
   </div>
 </section>
+
+
+<!-- 実績ティッカー：Lifeが企画した物件名が細い帯を流れる（マウスを乗せると止まる） -->
+<div class="ticker" aria-label="Lifeが企画・管理する物件">
+  <p class="ticker-label">PLANNED BY LIFE</p>
+  <div class="ticker-view">
+    <div class="ticker-track" aria-hidden="true"><span>セレーナ飯塚Ⅱ</span><span>セレーナ福津</span><span>Klang</span><span>Taurus</span><span>nico</span><span>Onesta</span><span>Vita</span><span>La Balance</span><span>フルレゾン飯塚</span><span>Jugame CP吉塚</span><span>エミグランド感田</span><span>ブエナカーサ近大前</span><span>シャルムⅢ</span><span>セレーナ飯塚</span><span>LILIA飯塚</span><span>チェリーブロッサム感田</span><span>SAKURA</span><span>charme</span><span>カサグランデ川津</span><span>clair</span><span>Marble</span><span>Primaire trois</span><span>Habitation HIRA</span><span>emigrand HK 楽市</span><span>カサグランデ楽市</span><span>フルレゾン千早</span><span>Primaire deux</span><span>Primaire un</span><span>Cherry Blossoms</span><span>SERENA直方Ⅱ</span><span>サンシティ直方</span><span>primo</span><span>Esprit</span><span>Conseillez</span><span>Sentir</span><span>Farina</span><span>セレーナ飯塚Ⅱ</span><span>セレーナ福津</span><span>Klang</span><span>Taurus</span><span>nico</span><span>Onesta</span><span>Vita</span><span>La Balance</span><span>フルレゾン飯塚</span><span>Jugame CP吉塚</span><span>エミグランド感田</span><span>ブエナカーサ近大前</span><span>シャルムⅢ</span><span>セレーナ飯塚</span><span>LILIA飯塚</span><span>チェリーブロッサム感田</span><span>SAKURA</span><span>charme</span><span>カサグランデ川津</span><span>clair</span><span>Marble</span><span>Primaire trois</span><span>Habitation HIRA</span><span>emigrand HK 楽市</span><span>カサグランデ楽市</span><span>フルレゾン千早</span><span>Primaire deux</span><span>Primaire un</span><span>Cherry Blossoms</span><span>SERENA直方Ⅱ</span><span>サンシティ直方</span><span>primo</span><span>Esprit</span><span>Conseillez</span><span>Sentir</span><span>Farina</span></div>
+  </div>
+</div>
 
 <!-- ============ 対象者別の入口 ============ -->
 <section class="audience" id="audience">
@@ -221,14 +232,6 @@
 </section>
 
 <!-- ============ 一貫体制の帯 ============ -->
-<!-- アパックスホーム型：セクション区切りの巨大英字マーキー -->
-<div class="marquee marquee--ink" aria-hidden="true" style="padding:26px 0 0;">
-  <div class="marquee-track">
-    <span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span><span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span>
-    <span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span><span>PLANNING &middot; BROKERAGE &middot; MANAGEMENT &middot; EXIT</span>
-  </div>
-</div>
-
 <section class="flow-banner">
   <div class="container">
     <p class="flow-lead reveal">企画から管理、売却まで。<br class="sp-only"><em>窓口はLifeひとつ。</em></p>
@@ -705,7 +708,7 @@
   <a href="#contact" class="sticky-cta-form">無料相談フォーム</a>
 </div>
 
-<script src="assets/js/main.js?v=20260807d"></script>
+<script src="assets/js/main.js?v=20260807e"></script>
 
 <!-- 構造化データ：検索結果での会社情報・FAQの表示用 -->
 <script type="application/ld+json">
