@@ -1115,7 +1115,7 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
   display: flex; align-items: center; gap: 11px; margin-bottom: 13px;
 }
 .fv2-eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--c-yellow); flex: none; }
-.fv2-panel h1 { font-size: clamp(21px, 3.3vw, 39px); font-weight: 700; line-height: 1.5; letter-spacing: .035em; }
+.fv2-panel h1 { font-size: clamp(21px, 3vw, 35px); font-weight: 700; line-height: 1.5; letter-spacing: .035em; }
 .fv2-panel h1 em { font-style: normal; color: var(--c-yellow); }
 .fv2-sub { font-size: 13px; line-height: 1.9; color: #d4ebf5; margin-top: 14px; max-width: 460px; }
 
