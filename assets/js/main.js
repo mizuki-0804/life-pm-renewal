@@ -62,11 +62,24 @@
       revealObserver.observe(el);
     });
 
-    // 安全装置：スクロールを検知できない見方（自動キャプチャ・印刷・
-    // 一部の読み上げ環境など）でも、しばらくしたら必ず出す
-    setTimeout(function () {
+    var showAll = function () {
       revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
-    }, 2500);
+    };
+
+    // 安全装置1：2秒経っても画面内にあるのに出ていないものは強制表示する。
+    // 画面より下のものは対象にしない（ここを一律にすると、利用者が
+    // スクロールする前に全部出てしまい、スクロール時の動きが消える）
+    setTimeout(function () {
+      var vh = window.innerHeight;
+      revealTargets.forEach(function (el) {
+        if (el.getBoundingClientRect().top < vh) el.classList.add('is-visible');
+      });
+    }, 2000);
+
+    // 安全装置2：スクロールできない場合・印刷・自動キャプチャでは全部出す
+    if (document.documentElement.scrollHeight <= window.innerHeight + 4) showAll();
+    window.addEventListener('beforeprint', showAll);
+    setTimeout(showAll, 12000);
   }
 
   /* ---------- 背景写真のゆるいパララックス ---------- */
