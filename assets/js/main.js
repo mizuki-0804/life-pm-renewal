@@ -34,8 +34,12 @@
     onScroll();
   }
 
-  /* ---------- スクロール連動フェードイン ---------- */
-  var revealTargets = document.querySelectorAll('.reveal');
+  /* ---------- スクロール連動の登場（種類ごとに動きを変える） ---------- */
+  // reveal:下から / -l:左から / -r:右から / -zoom:写真が引く /
+  // -wipe:左から拭う / -rise:せり上がる / rule-draw:罫線が伸びる / mark:マーカーが塗られる
+  var MOTION = '.reveal, .reveal-l, .reveal-r, .reveal-zoom, .reveal-wipe, .reveal-rise, .rule-draw, .mark, .head2';
+  var revealTargets = document.querySelectorAll(MOTION);
+
   if (reduceMotion || !('IntersectionObserver' in window)) {
     revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
   } else {
@@ -53,7 +57,7 @@
       var parent = el.parentElement;
       if (parent && parent.children.length > 1 && !el.style.transitionDelay) {
         var index = Array.prototype.indexOf.call(parent.children, el);
-        el.style.transitionDelay = Math.min(index, 3) * 0.07 + 's';
+        el.style.transitionDelay = Math.min(index, 4) * 0.08 + 's';
       }
       revealObserver.observe(el);
     });
@@ -63,6 +67,31 @@
     setTimeout(function () {
       revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
     }, 2500);
+  }
+
+  /* ---------- 背景写真のゆるいパララックス ---------- */
+  // 帯や大きな写真が、スクロール量に対してわずかに遅れて動く
+  var parallaxItems = document.querySelectorAll('[data-parallax]');
+  if (parallaxItems.length && !reduceMotion) {
+    parallaxItems.forEach(function (el) { el.classList.add('parallax-in'); });
+    var ticking = false;
+    var applyParallax = function () {
+      var vh = window.innerHeight;
+      parallaxItems.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.bottom < -200 || rect.top > vh + 200) return;
+        var amount = parseFloat(el.dataset.parallax) || 12;
+        // 要素が画面中央にある時を0として、上下に動かす
+        var progress = (rect.top + rect.height / 2 - vh / 2) / vh;
+        el.style.transform = 'translate3d(0,' + (progress * amount).toFixed(2) + 'px,0)';
+      });
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(applyParallax); }
+    }, { passive: true });
+    window.addEventListener('resize', applyParallax, { passive: true });
+    applyParallax();
   }
 
   /* ---------- 数字のカウントアップ ---------- */

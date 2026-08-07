@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- 制作中はCSS更新が確実に反映されるようv=を都度上げる -->
-<link rel="stylesheet" href="assets/css/style.css?v=20260807e">
+<link rel="stylesheet" href="assets/css/style.css?v=20260807f">
 <!-- JSが動く環境でだけ登場アニメーションを有効にする -->
 <script>document.documentElement.className += ' js';</script>
 <!-- structured-data -->
@@ -119,7 +119,7 @@
 <!-- ============ メインビジュアル ============ -->
 <!-- ============ ファーストビュー（写真全面＋斜めのブランドパネル） ============ -->
 <section class="fv2">
-  <div class="fv2-bg">
+  <div class="fv2-bg" data-parallax="26">
     <img src="assets/img/bukken-klang.webp" alt="Lifeが企画・管理する賃貸物件" fetchpriority="high">
   </div>
   <div class="fv2-stage">
@@ -135,17 +135,17 @@
   </div>
   <div class="fv2-stats">
     <div class="container fv2-stats-in">
-      <div class="fv2-stat">
+      <div class="fv2-stat rule-draw">
         <p class="lb">新築アパート 平均表面利回り</p>
         <p class="nm"><span class="count" data-count="9.75" data-dec="2">0.00</span><span class="u">%</span></p>
         <p class="nt">※2021年3月までの企画販売物件</p>
       </div>
-      <div class="fv2-stat">
+      <div class="fv2-stat rule-draw">
         <p class="lb">新築RC 平均表面利回り</p>
         <p class="nm"><span class="count" data-count="6.88" data-dec="2">0.00</span><span class="u">%</span></p>
         <p class="nt">※2021年3月までの企画販売物件</p>
       </div>
-      <div class="fv2-stat">
+      <div class="fv2-stat rule-draw">
         <p class="lb">企画・管理の累計実績</p>
         <p class="nm"><span class="count" data-count="39">0</span><span class="u">棟</span></p>
         <p class="nt">※木造32棟・RC造7棟</p>
@@ -169,28 +169,28 @@
     <div class="head2 is-center reveal"><p class="en">FOR YOU</p><h2>オーナー様・入居者様・仲介会社様へ</h2></div>
     <p class="sec-lead reveal">それぞれのお立場に合わせたご案内です。</p>
     <div class="audience-grid">
-      <a href="owner/index.html" class="aud-card reveal">
+      <a href="owner/index.html" class="aud-card reveal-rise">
         <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34V17l14-9 14 9v17"/><path d="M3 34h34"/><path d="M16 34v-9h8v9"/><path d="M20 3v5"/></svg></span>
         <p class="aud-label">オーナー・投資検討者の方</p>
         <h3>収益物件を買いたい・企画したい</h3>
         <p class="aud-text">利回りの根拠、返済後に残る額、出口までの見通しをご説明します。</p>
         <span class="aud-more">投資・新築のご案内<span>›</span></span>
       </a>
-      <a href="#reasons" class="aud-card reveal">
+      <a href="#reasons" class="aud-card reveal-rise">
         <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34V12a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v22"/><path d="M5 34h30"/><path d="M14 17h5M14 24h5M25 17h2M25 24h2"/><path d="M17 34v-5h6v5"/></svg></span>
         <p class="aud-label">管理を相談したい方</p>
         <h3>いまの管理会社に不満がある</h3>
         <p class="aud-text">空室が埋まらない、修繕費が読めない、連絡しても動かない。管理は途中で変えられます。</p>
         <span class="aud-more">管理の考え方を見る<span>›</span></span>
       </a>
-      <a href="nyukyosha/index.html" class="aud-card reveal">
+      <a href="nyukyosha/index.html" class="aud-card reveal-rise">
         <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18l14-10 14 10"/><path d="M9 16v18h22V16"/><path d="M17 34V23h6v11"/><circle cx="20" cy="15" r="0"/></svg></span>
         <p class="aud-label">ご入居者様</p>
         <h3>Lifeの管理物件にお住まいの方</h3>
         <p class="aud-text">ご入居中のルール、設備の不具合、退去のお手続きについてご案内しています。</p>
         <span class="aud-more">ご入居者様のご案内<span>›</span></span>
       </a>
-      <a href="kushitsu/index.html" class="aud-card reveal">
+      <a href="kushitsu/index.html" class="aud-card reveal-rise">
         <span class="aud-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="30" height="22" rx="2"/><path d="M5 17h30"/><path d="M12 6v6M28 6v6"/><path d="M12 24h8"/></svg></span>
         <p class="aud-label">仲介会社様</p>
         <h3>空室情報をお探しの方</h3>
@@ -204,25 +204,25 @@
 <!-- ============ アイコン数字ボックス ============ -->
 <section class="numbers" id="numbers">
   <div class="container numbers-grid">
-    <div class="num-card reveal">
+    <div class="num-card reveal-rise">
       <span class="num-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 34V9a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v25"/><path d="M5 34h30"/><rect x="13" y="12" width="5" height="5"/><rect x="22" y="12" width="5" height="5"/><rect x="13" y="21" width="5" height="5"/><rect x="22" y="21" width="5" height="5"/><path d="M17 34v-4h6v4"/></svg></span>
       <p class="num-label">新築アパート<br>平均表面利回り</p>
       <p class="num-value"><span class="count" data-count="9.75" data-dec="2">0.00</span><span class="num-unit">%</span></p>
       <p class="num-note">※2021年3月までの企画販売物件</p>
     </div>
-    <div class="num-card reveal">
+    <div class="num-card reveal-rise">
       <span class="num-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 34V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v27"/><path d="M6 34h28"/><rect x="16" y="9" width="4" height="4"/><rect x="23" y="9" width="4" height="4"/><rect x="16" y="16" width="4" height="4"/><rect x="23" y="16" width="4" height="4"/><rect x="16" y="23" width="4" height="4"/><rect x="23" y="23" width="4" height="4"/></svg></span>
       <p class="num-label">新築RC<br>平均表面利回り</p>
       <p class="num-value"><span class="count" data-count="6.88" data-dec="2">0.00</span><span class="num-unit">%</span></p>
       <p class="num-note">※2021年3月までの企画販売物件</p>
     </div>
-    <div class="num-card reveal">
+    <div class="num-card reveal-rise">
       <span class="num-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 33V15l11-6 11 6v5"/><path d="M4 33h17"/><rect x="12" y="19" width="5" height="5"/><circle cx="29" cy="28" r="7"/><path d="M25.8 28l2.3 2.3 4.4-4.6"/></svg></span>
       <p class="num-label">直近2年の<br>竣工実績</p>
       <p class="num-value"><span class="count" data-count="10">0</span><span class="num-unit">棟</span></p>
       <p class="num-note">※2024〜2025年竣工の企画物件</p>
     </div>
-    <div class="num-card reveal">
+    <div class="num-card reveal-rise">
       <span class="num-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="20" r="14"/><path d="M20 11.5V20l6 3.8"/></svg></span>
       <p class="num-label">設備トラブル<br>受付体制</p>
       <p class="num-value"><span class="count" data-count="24">0</span><span class="num-unit">時間</span></p>
@@ -237,32 +237,32 @@
     <p class="flow-lead reveal">企画から管理、売却まで。<br class="sp-only"><em>窓口はLifeひとつ。</em></p>
     <p class="flow-sub reveal">企画した会社が、そのまま管理して、出口まで見ます。局面ごとに担当が変わりません。</p>
     <ol class="flow-steps">
-      <li class="flow-step reveal">
+      <li class="flow-step reveal-l">
         <span class="flow-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 32V16l11-5 11 5 8-3v16l-8 3-11-5-11 5z"/><path d="M16 11v16M27 16v16"/></svg></span>
         <span class="flow-no">01</span>
         <span class="flow-name">エリア調査</span>
       </li>
-      <li class="flow-step reveal">
+      <li class="flow-step reveal-l">
         <span class="flow-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 35h32"/><path d="M9 35V7h3v28"/><path d="M9 11h21"/><path d="M25 11v5"/><path d="M20 16h10v8H20z"/></svg></span>
         <span class="flow-no">02</span>
         <span class="flow-name">収支から企画</span>
       </li>
-      <li class="flow-step reveal">
+      <li class="flow-step reveal-l">
         <span class="flow-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 34V15l13-8 13 8v19"/><path d="M4 34h32"/><rect x="13" y="18" width="5" height="5"/><rect x="22" y="18" width="5" height="5"/><path d="M17 34v-6h6v6"/></svg></span>
         <span class="flow-no">03</span>
         <span class="flow-name">販売・お引渡し</span>
       </li>
-      <li class="flow-step reveal">
+      <li class="flow-step reveal-l">
         <span class="flow-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="17" r="7.5"/><path d="M20.5 22.5L32 34"/><path d="M27.5 29.5l3.5-3.5"/><path d="M24 26l3.5-3.5"/></svg></span>
         <span class="flow-no">04</span>
         <span class="flow-name">入居を付ける</span>
       </li>
-      <li class="flow-step reveal">
+      <li class="flow-step reveal-l">
         <span class="flow-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5l13 5v10c0 8-5.5 13.5-13 15-7.5-1.5-13-7-13-15V10z"/><path d="M15 20l4 4 7-8"/></svg></span>
         <span class="flow-no">05</span>
         <span class="flow-name">運営・管理</span>
       </li>
-      <li class="flow-step reveal">
+      <li class="flow-step reveal-l">
         <span class="flow-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 34h32"/><path d="M7 28l8-8 6 5 12-13"/><path d="M26 12h7v7"/></svg></span>
         <span class="flow-no">06</span>
         <span class="flow-name">売却・出口</span>
@@ -282,28 +282,28 @@
     </div>
     <p class="head2-lead reveal">管理会社が実際に何をしているかは、外からは見えにくいものです。Lifeがやっていることを5つに分けてご説明します。</p>
     <div class="numcards">
-      <div class="numcard reveal">
-        <div class="numcard-thumb"><span class="numcard-no">01</span><img src="assets/img/rc-charme.webp" alt="" loading="lazy"></div>
+      <div class="numcard reveal-rise">
+        <div class="numcard-thumb reveal-zoom"><span class="numcard-no">01</span><img src="assets/img/rc-charme.webp" alt="" loading="lazy"></div>
         <h3>高くも、安くも出さない</h3>
         <p>賃料を欲張れば空室期間が伸び、下げれば収益が痩せます。周辺の競合と実際の成約価格を調べ、いま決まる金額で募集します。</p>
       </div>
-      <div class="numcard reveal">
-        <div class="numcard-thumb"><span class="numcard-no">02</span><img src="assets/img/office.webp" alt="" loading="lazy"></div>
+      <div class="numcard reveal-rise">
+        <div class="numcard-thumb reveal-zoom"><span class="numcard-no">02</span><img src="assets/img/office.webp" alt="" loading="lazy"></div>
         <h3>自社で抱え込まない</h3>
         <p>空室情報は地場の仲介会社へ広く流します。自社で決めることにこだわって空室を長引かせるより、早く埋まるほうがオーナー様の利益になります。</p>
       </div>
-      <div class="numcard reveal">
-        <div class="numcard-thumb"><span class="numcard-no">03</span><img src="assets/img/bukken-onesta.webp" alt="" loading="lazy"></div>
+      <div class="numcard reveal-rise">
+        <div class="numcard-thumb reveal-zoom"><span class="numcard-no">03</span><img src="assets/img/bukken-onesta.webp" alt="" loading="lazy"></div>
         <h3>埋めることを目的にしない</h3>
         <p>急いで埋めた結果の滞納は、空室より高くつきます。入居者の属性を厳正に見て、長く住んでいただける方をお通しします。</p>
       </div>
-      <div class="numcard reveal">
-        <div class="numcard-thumb"><span class="numcard-no">04</span><img src="assets/img/bukken-taurus.webp" alt="" loading="lazy"></div>
+      <div class="numcard reveal-rise">
+        <div class="numcard-thumb reveal-zoom"><span class="numcard-no">04</span><img src="assets/img/bukken-taurus.webp" alt="" loading="lazy"></div>
         <h3>工事は、言い値で発注しない</h3>
         <p>修繕は必要です。ただし請求書をそのまま回すことはしません。外注先と単価を管理し、必要な工事を適正な金額で行います。</p>
       </div>
-      <div class="numcard reveal">
-        <div class="numcard-thumb"><span class="numcard-no">05</span><img src="assets/img/bukken-serena-fukutsu.webp" alt="" loading="lazy"></div>
+      <div class="numcard reveal-rise">
+        <div class="numcard-thumb reveal-zoom"><span class="numcard-no">05</span><img src="assets/img/bukken-serena-fukutsu.webp" alt="" loading="lazy"></div>
         <h3>解約は、不満が溜まる前に止める</h3>
         <p>設備トラブルは24時間受付。あわせて定期巡回と入居者様との対話を重ね、退去の芽を早い段階で摘みます。</p>
       </div>
@@ -318,22 +318,22 @@
     <div class="head2 is-center reveal"><p class="en">TOTAL SUPPORT</p><h2>Lifeのトータルサポート</h2></div>
     <p class="sec-lead reveal">企画する、売買する、貸す、管理する。どこか一つを切り出すのではなく、通しで担当します。</p>
     <div class="support-grid">
-      <a href="business/toushi/index.html" class="support-card reveal">
+      <a href="business/toushi/index.html" class="support-card reveal-rise">
         <img src="assets/img/rc-charme.webp" alt="不動産購入のご相談" loading="lazy">
         <h3>不動産購入</h3>
         <p>返済と経費を引いたあとに残る額でご説明します。金融機関のご紹介まで対応します。</p>
       </a>
-      <a href="#" class="support-card reveal">
+      <a href="#" class="support-card reveal-rise">
         <img src="assets/img/bukken-klang.webp" alt="新築プランニング" loading="lazy">
         <h3>新築プランニング</h3>
         <p>土地の選定から間取りと戸数まで、収支から逆算して決めていきます。</p>
       </a>
-      <a href="business/chintaikanri/index.html" class="support-card reveal">
+      <a href="business/chintaikanri/index.html" class="support-card reveal-rise">
         <img src="assets/img/tenpo.webp" alt="賃貸管理" loading="lazy">
         <h3>賃貸管理</h3>
         <p>募集、審査、契約、家賃の回収、設備対応、更新、退去まで一括して承ります。</p>
       </a>
-      <a href="business/toushi/index.html" class="support-card reveal">
+      <a href="business/toushi/index.html" class="support-card reveal-rise">
         <img src="assets/img/bukken-taurus.webp" alt="売却・出口戦略" loading="lazy">
         <h3>売却・出口戦略</h3>
         <p>相場と残債と税金を並べ、「いまは売らない」という結論も含めてご提案します。</p>
@@ -347,8 +347,8 @@
   <div class="container">
     <h2 class="sec-title sec-title-light reveal">Lifeが企画する新築賃貸<br class="sp-only">木造アパート・RCマンション</h2>
     <div class="brand-split">
-      <div class="brand-panel reveal">
-        <img src="assets/img/bukken-klang.webp" alt="Lifeが企画した新築アパートの外観" class="brand-hero">
+      <div class="brand-panel reveal-l">
+        <img src="assets/img/bukken-klang.webp" alt="Lifeが企画した新築アパートの外観" class="brand-hero" data-parallax="18">
         <div class="brand-panel-body">
           <p class="brand-panel-sub">エリアの家賃相場を調べ、収支から利回りを組み立てる</p>
           <p class="brand-panel-name">新築アパート<span>木造省令準耐火構造</span></p>
@@ -361,8 +361,8 @@
           <img src="assets/img/bukken-serena-fukutsu.webp" alt="セレーナ福津" loading="lazy">
         </div>
       </div>
-      <div class="brand-panel reveal">
-        <img src="assets/img/rc-jugame.webp" alt="Jugame CP吉塚の外観" class="brand-hero">
+      <div class="brand-panel reveal-r">
+        <img src="assets/img/rc-jugame.webp" alt="Jugame CP吉塚の外観" class="brand-hero" data-parallax="18">
         <div class="brand-panel-body">
           <p class="brand-panel-sub">戸数を取れる立地で規模を活かす</p>
           <p class="brand-panel-name">新築マンション<span>RC造</span></p>
@@ -383,7 +383,7 @@
 <!-- ============ 代表挨拶 ============ -->
 <section class="message" id="message">
   <div class="container message-inner">
-    <div class="message-photo reveal">
+    <div class="message-photo reveal-l">
       <img src="assets/img/daihyo.webp" alt="株式会社Life 代表取締役 内村優介" loading="lazy">
       <div class="message-profile">
         <p class="message-role">代表取締役</p>
@@ -395,7 +395,7 @@
         </ul>
       </div>
     </div>
-    <div class="message-body reveal">
+    <div class="message-body reveal-r">
       <h2 class="message-title">企画して終わり、売って終わりにしない</h2>
       <p class="message-catch">Lifeは、新築の企画から売買の仲介、入居付け、<br class="pc-only">日々の賃貸管理までを担う会社です。</p>
       <p class="message-text">賃貸経営は、契約書を交わした日から始まります。私たちが見ているのはその日ではなく、<mark>十年後二十年後にオーナー様の手元へいくら残るか</mark>です。だから、売りやすい物件ではなく、貸し続けられる物件を企画します。取引が終わってからのほうが、私たちの仕事は長い。</p>
@@ -410,8 +410,8 @@
   <div class="container">
     <div class="head2 is-center reveal"><p class="en">STRENGTH</p><h2>株式会社Lifeの強み</h2></div>
 
-    <div class="feature-row reveal">
-      <div class="feature-photo"><img src="assets/img/office.webp" alt="株式会社Life 店内" loading="lazy"></div>
+    <div class="feature-row reveal-l">
+      <div class="feature-photo reveal-zoom"><img src="assets/img/office.webp" alt="株式会社Life 店内" loading="lazy"></div>
       <div class="feature-card">
         <h3>当社の特徴</h3>
         <p>新築の企画、売買の仲介、入居付け、日々の賃貸管理。オーナー様が関わる局面を通しで担当します。企画した人間がそのまま管理まで見るので、話が途中で途切れません。</p>
@@ -419,8 +419,8 @@
       </div>
     </div>
 
-    <div class="feature-row feature-row-rev reveal">
-      <div class="feature-photo"><img src="assets/img/bukken-onesta.webp" alt="Lifeが企画した物件" loading="lazy"></div>
+    <div class="feature-row feature-row-rev reveal-r">
+      <div class="feature-photo reveal-zoom"><img src="assets/img/bukken-onesta.webp" alt="Lifeが企画した物件" loading="lazy"></div>
       <div class="feature-card">
         <h3>当社が選ばれる5つの理由</h3>
         <p>賃料の決め方、募集の広げ方、入居審査、工事の発注、退去を止める動き。管理で実際にやっていることを5つに分けてご説明します。</p>
@@ -440,15 +440,15 @@
       <p>オーナー様への取材と掲載許諾をいただき次第、実際のお声に差し替えます。事実でない内容を仮に置くことはいたしません。取材の際は、お名前（イニシャル可）・ご所有物件・お困りだったこと・依頼後に変わったことの4点を伺います。</p>
     </div>
     <div class="voices-grid">
-      <div class="voice-card is-empty reveal">
+      <div class="voice-card is-empty reveal-rise">
         <p class="voice-meta">取材予定</p>
         <p class="voice-text">管理替えをご検討されたオーナー様</p>
       </div>
-      <div class="voice-card is-empty reveal">
+      <div class="voice-card is-empty reveal-rise">
         <p class="voice-meta">取材予定</p>
         <p class="voice-text">新築アパートを企画されたオーナー様</p>
       </div>
-      <div class="voice-card is-empty reveal">
+      <div class="voice-card is-empty reveal-rise">
         <p class="voice-meta">取材予定</p>
         <p class="voice-text">相続をきっかけにご相談いただいたオーナー様</p>
       </div>
@@ -462,31 +462,31 @@
     <div class="head2 is-center reveal"><p class="en">FAQ</p><h2>よくあるご質問</h2></div>
     <p class="sec-lead reveal">オーナー様から実際にいただくご質問をまとめました。</p>
     <div class="faq-list">
-      <details class="faq-item reveal">
+      <details class="faq-item reveal-rise">
         <summary>いまの管理会社を、途中で変えることはできますか。</summary>
         <div class="faq-a"><p>できます。多くの管理委託契約には解約予告期間（3か月前など）が定められていますので、まずお手元の契約書をご確認ください。現在の管理会社とのやり取りや入居者様への通知も、当社で段取りいたします。</p></div>
       </details>
-      <details class="faq-item reveal">
+      <details class="faq-item reveal-rise">
         <summary>対応しているエリアを教えてください。</summary>
         <div class="faq-a"><p>本店を福岡県糟屋郡新宮町、飯塚店を福岡県飯塚市に置いています。<span class="faq-todo">［要確認：対応エリアの範囲］</span></p></div>
       </details>
-      <details class="faq-item reveal">
+      <details class="faq-item reveal-rise">
         <summary>管理をお願いすると、費用はどれくらいかかりますか。</summary>
         <div class="faq-a"><p><span class="faq-todo">［要確認：管理手数料の料率・初期費用の有無］</span>物件の規模や戸数、ご依頼いただく業務の範囲によって変わりますので、現地を拝見したうえでお見積りいたします。</p></div>
       </details>
-      <details class="faq-item reveal">
+      <details class="faq-item reveal-rise">
         <summary>設備のトラブルは、夜間や休日でも対応してもらえますか。</summary>
         <div class="faq-a"><p>設備トラブルの受付は24時間体制です。緊急性のあるもの（水漏れ、鍵、給湯器など）は、受付後すぐに手配いたします。対象は当社が管理を受託している物件です。</p></div>
       </details>
-      <details class="faq-item reveal">
+      <details class="faq-item reveal-rise">
         <summary>一棟だけでも、管理をお願いできますか。</summary>
         <div class="faq-a"><p><span class="faq-todo">［要確認：受託の最低条件（棟数・戸数）］</span></p></div>
       </details>
-      <details class="faq-item reveal">
+      <details class="faq-item reveal-rise">
         <summary>土地を持っていないのですが、新築の相談はできますか。</summary>
         <div class="faq-a"><p><span class="faq-todo">［要確認：土地の紹介可否・提携先の有無］</span>Lifeは土地の企画段階から関わり、収支から逆算して間取りと戸数を決めています。</p></div>
       </details>
-      <details class="faq-item reveal">
+      <details class="faq-item reveal-rise">
         <summary>相談したら、必ず契約しないといけませんか。</summary>
         <div class="faq-a"><p>そのようなことはありません。ご相談は無料です。相場と残債、税金を並べたうえで「いまは動かないほうがよい」とお伝えすることもあります。売り込みはいたしません。</p></div>
       </details>
@@ -500,19 +500,19 @@
   <div class="container">
     <div class="head2 is-center reveal"><p class="en">NEWS</p><h2>新着情報</h2></div>
     <ul class="news-list">
-      <li class="reveal"><a href="jisseki/klang.html">
+      <li class="reveal-rise"><a href="jisseki/klang.html">
         <div class="news-body"><p class="news-date">2025年03月<span class="news-new">NEW</span></p>
         <p class="news-text">【新築アパート「Klang（クラン）」が竣工しました】</p></div>
         <img src="assets/img/bukken-klang.webp" alt="" loading="lazy"></a></li>
-      <li class="reveal"><a href="jisseki/taurus.html">
+      <li class="reveal-rise"><a href="jisseki/taurus.html">
         <div class="news-body"><p class="news-date">2025年03月</p>
         <p class="news-text">【新築アパート「Taurus（トーラス）」が竣工しました】</p></div>
         <img src="assets/img/bukken-taurus.webp" alt="" loading="lazy"></a></li>
-      <li class="reveal"><a href="jisseki/serena-fukutsu.html">
+      <li class="reveal-rise"><a href="jisseki/serena-fukutsu.html">
         <div class="news-body"><p class="news-date">2025年03月</p>
         <p class="news-text">【「セレーナ福津」が竣工しました】</p></div>
         <img src="assets/img/bukken-serena-fukutsu.webp" alt="" loading="lazy"></a></li>
-      <li class="reveal"><a href="jisseki/index.html">
+      <li class="reveal-rise"><a href="jisseki/index.html">
         <div class="news-body"><p class="news-date">2024年08月</p>
         <p class="news-text">【新築アパート「niko（ニコ）」「Onesta（オネスタ）」が竣工しました】</p></div>
         <img src="assets/img/bukken-niko.webp" alt="" loading="lazy"></a></li>
@@ -526,7 +526,7 @@
   <div class="container">
     <div class="head2 is-center reveal"><p class="en">COMPANY</p><h2>会社情報</h2></div>
     <div class="company-inner">
-      <div class="company-main reveal">
+      <div class="company-main reveal-l">
         <table class="company-table">
           <tr><th>社名</th><td>株式会社Life</td></tr>
           <tr><th>代表取締役</th><td>内村 優介</td></tr>
@@ -554,7 +554,7 @@
         </div>
         <p style="margin-top:18px;"><a href="company/index.html" class="others-more">会社概要のくわしい情報へ<span>›</span></a></p>
       </div>
-      <div class="company-side reveal">
+      <div class="company-side reveal-r">
         <img src="assets/img/tenpo.webp" alt="株式会社Life 本店外観" class="company-photo" loading="lazy">
         <h3 class="company-side-title">所属団体・登録</h3>
         <div class="company-banners">
@@ -583,7 +583,7 @@
   <div class="container">
     <div class="head2 is-center reveal"><p class="en">RESIDENTS &amp; AGENTS</p><h2>ご入居者様・仲介会社様へ</h2></div>
     <div class="others-grid">
-      <div class="others-card reveal">
+      <div class="others-card reveal-l">
         <h3>ご入居者様へ</h3>
         <p>ご入居中のルールとマナー、退去のお手続きをご案内しています。</p>
         <p class="others-tel">入居者様専用ダイヤル<strong><a href="tel:0120500876">0120-500-876</a></strong></p>
@@ -595,7 +595,7 @@
           </span>
         </div>
       </div>
-      <a href="kushitsu/index.html" class="others-card reveal">
+      <a href="kushitsu/index.html" class="others-card reveal-r">
         <h3>仲介会社様へ</h3>
         <p>当社管理物件の空室一覧をご確認いただけます。募集図面・条件のお問い合わせも受け付けています。</p>
         <p class="others-link">空室一覧を見る<span>›</span></p>
@@ -605,7 +605,7 @@
 </section>
 
 <!-- ============ 管理替えバナー ============ -->
-<section class="pickup-banner">
+<section class="pickup-banner reveal-wipe">
   <div class="container pickup-inner">
     <div class="pickup-text">
       <h2 class="pickup-title">賃貸アパート・マンションの<br class="sp-only">管理、承ります！</h2>
@@ -624,10 +624,10 @@
 <!-- ============ お問い合わせ ============ -->
 <section class="contact" id="contact">
   <div class="container">
-    <h2 class="sec-title sec-title-light reveal">お問い合わせ</h2>
+    <h2 class="sec-title sec-title-light reveal-wipe">お問い合わせ</h2>
     <p class="contact-lead reveal">いま持っている物件のご相談でも、これから買う・企画するご相談でも構いません。売り込みはいたしません。</p>
     <div class="contact-grid">
-      <div class="contact-box reveal">
+      <div class="contact-box reveal-l">
         <h3>お電話でのお問い合わせ</h3>
         <p class="contact-label">代表電話</p>
         <p class="contact-tel"><a href="tel:0927190322">092-719-0322</a></p>
@@ -641,7 +641,7 @@
         </p>
         <p class="contact-hours">受付時間 9:30〜18:00／定休日 土・日・祝</p>
       </div>
-      <div class="contact-box reveal">
+      <div class="contact-box reveal-r">
         <h3>メールでのお問い合わせ</h3>
         <p>フォームは24時間受け付けています。物件の所在地と、いま困っていることだけ書いていただければ十分です。</p>
         <a href="contact/index.html" class="btn btn-yellow btn-block">お問い合わせフォームへ<span>›</span></a>
@@ -708,7 +708,7 @@
   <a href="#contact" class="sticky-cta-form">無料相談フォーム</a>
 </div>
 
-<script src="assets/js/main.js?v=20260807e"></script>
+<script src="assets/js/main.js?v=20260807f"></script>
 
 <!-- 構造化データ：検索結果での会社情報・FAQの表示用 -->
 <script type="application/ld+json">
