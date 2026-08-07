@@ -1299,3 +1299,115 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
 @media (max-width: 767px)  { .ws-card { flex: 0 0 calc((100% - 18px) / 2); } }
 @media (max-width: 460px)  { .ws-card { flex: 0 0 100%; } }
 @media (prefers-reduced-motion: reduce) { .ws-track { transition: none; } .ws-card:hover .thumb img { transform: none; } }
+
+/* ============================================
+   ホバー時の動き（サイト全体で統一）
+   カード=浮く／写真=ゆっくり寄る／矢印=右へ滑る／見出し=色が動く
+   ============================================ */
+
+/* --- 写真つきカード：浮き上がり＋写真がゆっくり寄る --- */
+.numcard-thumb { overflow: hidden; }
+.numcard { transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+.numcard:hover { transform: translateY(-6px); }
+.numcard-thumb img { transition: transform .8s cubic-bezier(.22,.61,.36,1); }
+.numcard:hover .numcard-thumb img { transform: scale(1.07); }
+.numcard-no { transition: color .3s, transform .4s; }
+.numcard:hover .numcard-no { color: var(--c-primary-deep); transform: translateY(-3px); }
+.numcard h3 { transition: color .3s; }
+.numcard:hover h3 { color: var(--c-primary); }
+
+/* --- 三和型カード --- */
+.duo-card { overflow: hidden; transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+.duo-card img { transition: transform .85s cubic-bezier(.22,.61,.36,1); }
+.duo-card:hover { transform: translateY(-5px); }
+.duo-card:hover img { transform: scale(1.06); }
+.duo-tag { transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+.duo-card:hover .duo-tag { transform: translateX(7px); }
+.duo-body .more { transition: transform .3s; display: inline-block; }
+.duo-card:hover .duo-body .more { transform: translateX(5px); }
+
+/* --- 大和財託型サービス一覧 --- */
+.svc-item img { transition: transform .5s cubic-bezier(.22,.61,.36,1), box-shadow .4s; }
+.svc-item:hover img { transform: translateY(-5px); box-shadow: 0 10px 22px rgba(13,95,125,.18); }
+.svc-head h3 { transition: color .3s; }
+.svc-item:hover .svc-head h3 { color: var(--c-primary); }
+.svc-item:hover .svc-arrow { transform: translateX(3px); }
+.svc-arrow { transition: background-color .2s, color .2s, transform .3s; }
+
+/* --- 実績カルーセル --- */
+.ws-card { transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+.ws-card:hover { transform: translateY(-6px); }
+.ws-card h3 { transition: color .3s; }
+.ws-card:hover h3 { color: var(--c-primary); }
+.ws-badge { transition: transform .35s; }
+.ws-card:hover .ws-badge { transform: translateX(5px); }
+
+/* --- アイケン型の写真の帯 --- */
+.photo-strip img { position: relative; transition: transform .6s cubic-bezier(.22,.61,.36,1), filter .4s; }
+.photo-strip img:hover { transform: scale(1.05); filter: brightness(1.06); z-index: 2; }
+
+/* --- GLC型の数字 --- */
+.stat-item, .fv2-stat { transition: transform .35s; }
+.stat-item:hover, .fv2-stat:hover { transform: translateY(-4px); }
+.stat-num, .fv2-stat .nm { transition: color .3s; }
+.stat-item:hover .stat-num, .fv2-stat:hover .nm { color: var(--c-primary); }
+
+/* --- 流れの大きな写真 --- */
+.flow2-visual img.is-on { transition: opacity .6s ease, transform 1.2s cubic-bezier(.22,.61,.36,1); }
+.flow2-visual:hover img.is-on { transform: scale(1.05); }
+
+/* --- 強み・代表挨拶・企画した建物の写真 --- */
+.js .reveal-zoom.is-visible:hover img { transform: scale(1.06); }
+.feature-row { transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+.feature-row:hover { transform: translateY(-4px); }
+.message-photo img, .brand-hero, .brand-thumbs img { transition: transform .8s cubic-bezier(.22,.61,.36,1), filter .4s; }
+.message-photo:hover img { transform: scale(1.04); }
+.brand-panel:hover .brand-hero { transform: scale(1.04); }
+.brand-thumbs img:hover { transform: scale(1.08); filter: brightness(1.08); }
+.brand-panel { transition: transform .45s cubic-bezier(.22,.61,.36,1); overflow: hidden; }
+.brand-panel:hover { transform: translateY(-5px); }
+
+/* --- 声・新着・会社情報 --- */
+.voice-card { transition: border-color .3s, transform .35s, box-shadow .35s; }
+.voice-card:hover { border-color: var(--c-primary); transform: translateY(-4px); box-shadow: 0 8px 20px rgba(13,95,125,.1); }
+.news-list a img { transition: transform .7s cubic-bezier(.22,.61,.36,1); }
+.news-list a:hover img { transform: scale(1.07); }
+.company-table tr { transition: background-color .25s; }
+.company-table tr:hover { background: var(--c-surface); }
+.company-banners a { transition: transform .35s; }
+.company-banners a:hover { transform: translateY(-4px); }
+
+/* --- 対象者別の入口 --- */
+.aud-card .aud-icon { transition: transform .45s cubic-bezier(.22,.61,.36,1), color .3s; }
+.aud-card:hover .aud-icon { transform: translateY(-5px) scale(1.06); }
+
+/* --- 実績ティッカー：文字にマウスを乗せると光る --- */
+.ticker-track span { transition: color .25s; }
+.ticker-track span:hover { color: #fff; }
+
+/* --- ロゴ・ヘッダー・固定CTA --- */
+.site-logo img { transition: opacity .3s, transform .4s; }
+.site-logo:hover img { opacity: .82; transform: translateY(-2px); }
+.sticky-cta a { transition: filter .25s; }
+.sticky-cta a:hover { filter: brightness(1.08); }
+.footer-logo { transition: opacity .3s; }
+.site-footer:hover .footer-logo { opacity: .9; }
+
+/* --- ボタンの矢印が右へ滑る --- */
+.btn span, .cta-btn span, .header-btn span, .others-more span, .aud-more span { transition: transform .3s; display: inline-block; }
+.btn:hover span, .cta-btn:hover span, .header-btn:hover span, .others-more:hover span, .aud-more:hover span { transform: translateX(4px); }
+
+/* --- 一貫体制の帯：工程アイコン --- */
+.flow-step .flow-icon { transition: transform .4s cubic-bezier(.22,.61,.36,1), background-color .3s; }
+.flow-step:hover .flow-icon { transform: translateY(-5px) scale(1.08); }
+
+@media (prefers-reduced-motion: reduce) {
+  .numcard, .numcard-thumb img, .numcard-no, .duo-card, .duo-card img, .duo-tag,
+  .svc-item img, .ws-card, .ws-badge, .photo-strip img, .stat-item, .fv2-stat,
+  .feature-row, .message-photo img, .brand-hero, .brand-thumbs img, .brand-panel,
+  .voice-card, .news-list a img, .company-banners a, .aud-card .aud-icon,
+  .site-logo img, .flow-step .flow-icon, .btn span, .cta-btn span, .header-btn span,
+  .flow2-visual img.is-on, .duo-body .more {
+    transition: none !important; transform: none !important;
+  }
+}
