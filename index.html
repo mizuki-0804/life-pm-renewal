@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- 制作中はCSS更新が確実に反映されるようv=を都度上げる -->
-<link rel="stylesheet" href="assets/css/style.css?v=20260807a">
+<link rel="stylesheet" href="assets/css/style.css?v=20260807b">
 <!-- JSが動く環境でだけ登場アニメーションを有効にする -->
 <script>document.documentElement.className += ' js';</script>
 <!-- structured-data -->
@@ -117,25 +117,39 @@
 <main>
 
 <!-- ============ メインビジュアル ============ -->
-<section class="hero">
+<!-- ============ ファーストビュー（アパックスホーム型：青ベタ＋アーチ写真＋巨大英字マーキー） ============ -->
+<section class="fv">
   <div class="container">
-    <h1 class="hero-title reveal">Lifeは<em>企画から管理まで</em>の一貫プランニング</h1>
-    <div class="hero-split">
-      <a href="#brand" class="hero-panel reveal">
-        <img src="assets/img/bukken-klang.webp" alt="Lifeが企画した新築アパート">
-        <div class="hero-panel-body">
-          <p class="hero-panel-sub">エリアの家賃相場を調べ、収支から利回りを組み立てる</p>
-          <p class="hero-panel-title"><em>高利回り</em><br>新築アパート</p>
-          <p class="hero-panel-note">平均表面利回り 9.75％（当社企画物件の実績値）</p>
-        </div>
+    <div class="fv-arches">
+      <img src="assets/img/office.webp" alt="株式会社Life 店内" fetchpriority="high">
+      <img src="assets/img/bukken-klang.webp" alt="Lifeが企画した新築アパート" fetchpriority="high">
+      <img src="assets/img/rc-jugame.webp" alt="Lifeが企画した新築RCマンション" fetchpriority="high">
+      <img src="assets/img/tenpo.webp" alt="株式会社Life 本店" fetchpriority="high">
+    </div>
+  </div>
+  <div class="fv-marquee marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
+      <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="fv-copy">
+      <h1>企画した会社が、そのまま管理する。<br><em>だから、話が途切れない。</em></h1>
+      <p>エリア調査・企画から売買、入居付け、日々の賃貸管理、そして出口まで。福岡でワンストップにご支援します。</p>
+    </div>
+    <div class="fv-cta">
+      <a href="#contact">
+        <span class="ic"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h24v16H10l-6 5z"/><path d="M10 14h12M10 19h8"/></svg></span>
+        <span class="tx">無料の投資相談<small>FREE CONSULTATION</small></span>
       </a>
-      <a href="#support" class="hero-panel reveal">
-        <img src="assets/img/bukken-serena-fukutsu.webp" alt="Lifeが管理する賃貸物件">
-        <div class="hero-panel-body">
-          <p class="hero-panel-sub">空室・滞納・修繕費をまとめて抑える</p>
-          <p class="hero-panel-title"><em>手取りを守る</em><br>賃貸管理</p>
-          <p class="hero-panel-note">設備トラブルは24時間受付／定期巡回つき</p>
-        </div>
+      <a href="#contact">
+        <span class="ic"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M6 27V7a2 2 0 0 1 2-2h14l6 6v16a2 2 0 0 1-2 2z"/><path d="M22 5v6h6"/><path d="M12 18h9M12 22h6"/></svg></span>
+        <span class="tx">無料の管理相談<small>MANAGEMENT SUPPORT</small></span>
+      </a>
+      <a href="kushitsu/index.html">
+        <span class="ic"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M5 28V13l11-8 11 8v15"/><path d="M2 28h28"/><rect x="12" y="18" width="8" height="10"/></svg></span>
+        <span class="tx">空室物件情報<small>FOR AGENTS</small></span>
       </a>
     </div>
   </div>
@@ -144,7 +158,7 @@
 <!-- ============ 対象者別の入口 ============ -->
 <section class="audience" id="audience">
   <div class="container">
-    <h2 class="sec-title reveal">オーナー様・入居者様・仲介会社様へ</h2>
+    <div class="head2 is-center reveal"><p class="en">FOR YOU</p><h2>オーナー様・入居者様・仲介会社様へ</h2></div>
     <p class="sec-lead reveal">それぞれのお立場に合わせたご案内です。</p>
     <div class="audience-grid">
       <a href="owner/index.html" class="aud-card reveal">
@@ -210,6 +224,14 @@
 </section>
 
 <!-- ============ 一貫体制の帯 ============ -->
+<!-- アパックスホーム型：セクション区切りの巨大英字マーキー -->
+<div class="marquee marquee--ink" aria-hidden="true" style="padding:26px 0 0;">
+  <div class="marquee-track">
+    <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
+    <span>ONE STOP TOTAL SUPPORT</span><span>ONE STOP TOTAL SUPPORT</span>
+  </div>
+</div>
+
 <section class="flow-banner">
   <div class="container">
     <p class="flow-lead reveal">企画から管理、売却まで。<br class="sp-only"><em>窓口はLifeひとつ。</em></p>
@@ -251,27 +273,41 @@
 </section>
 
 <!-- ============ 5つの理由 ============ -->
+<!-- ============ 選ばれる理由（アパックスホーム型：番号が写真にはみ出すカード） ============ -->
 <section class="reasons" id="reasons">
   <div class="container">
-    <h2 class="sec-title reveal">当社が選ばれる5つの理由</h2>
-    <p class="sec-lead reveal">管理会社が実際に何をしているかは、外からは見えにくいものです。Lifeがやっていることを5つに分けてご説明します。</p>
-    <ol class="reason-list">
-      <li class="reason-item reveal"><span class="reason-num">1</span>
-        <div><h3>高くも、安くも出さない</h3>
-        <p>賃料を欲張れば空室期間が伸び、下げれば収益が痩せます。周辺の競合と実際の成約価格を調べ、いま決まる金額で募集します。</p></div></li>
-      <li class="reason-item reveal"><span class="reason-num">2</span>
-        <div><h3>自社で抱え込まない</h3>
-        <p>空室情報は地場の仲介会社へ広く流します。自社で決めることにこだわって空室を長引かせるより、早く埋まるほうがオーナー様の利益になります。</p></div></li>
-      <li class="reason-item reveal"><span class="reason-num">3</span>
-        <div><h3>埋めることを目的にしない</h3>
-        <p>急いで埋めた結果の滞納は、空室より高くつきます。入居者の属性を厳正に見て、長く住んでいただける方をお通しします。</p></div></li>
-      <li class="reason-item reveal"><span class="reason-num">4</span>
-        <div><h3>工事は、言い値で発注しない</h3>
-        <p>修繕は必要です。ただし請求書をそのまま回すことはしません。外注先と単価を管理し、必要な工事を適正な金額で行います。</p></div></li>
-      <li class="reason-item reveal"><span class="reason-num">5</span>
-        <div><h3>解約は、不満が溜まる前に止める</h3>
-        <p>設備トラブルは24時間受付。あわせて定期巡回と入居者様との対話を重ね、退去の芽を早い段階で摘みます。</p></div></li>
-    </ol>
+    <div class="head2 is-center reveal">
+      <p class="en">REASONS</p>
+      <h2>Lifeが選ばれる5つの理由</h2>
+    </div>
+    <p class="head2-lead reveal">管理会社が実際に何をしているかは、外からは見えにくいものです。Lifeがやっていることを5つに分けてご説明します。</p>
+    <div class="numcards">
+      <div class="numcard reveal">
+        <div class="numcard-thumb"><span class="numcard-no">01</span><img src="assets/img/rc-charme.webp" alt="" loading="lazy"></div>
+        <h3>高くも、安くも出さない</h3>
+        <p>賃料を欲張れば空室期間が伸び、下げれば収益が痩せます。周辺の競合と実際の成約価格を調べ、いま決まる金額で募集します。</p>
+      </div>
+      <div class="numcard reveal">
+        <div class="numcard-thumb"><span class="numcard-no">02</span><img src="assets/img/office.webp" alt="" loading="lazy"></div>
+        <h3>自社で抱え込まない</h3>
+        <p>空室情報は地場の仲介会社へ広く流します。自社で決めることにこだわって空室を長引かせるより、早く埋まるほうがオーナー様の利益になります。</p>
+      </div>
+      <div class="numcard reveal">
+        <div class="numcard-thumb"><span class="numcard-no">03</span><img src="assets/img/bukken-onesta.webp" alt="" loading="lazy"></div>
+        <h3>埋めることを目的にしない</h3>
+        <p>急いで埋めた結果の滞納は、空室より高くつきます。入居者の属性を厳正に見て、長く住んでいただける方をお通しします。</p>
+      </div>
+      <div class="numcard reveal">
+        <div class="numcard-thumb"><span class="numcard-no">04</span><img src="assets/img/bukken-taurus.webp" alt="" loading="lazy"></div>
+        <h3>工事は、言い値で発注しない</h3>
+        <p>修繕は必要です。ただし請求書をそのまま回すことはしません。外注先と単価を管理し、必要な工事を適正な金額で行います。</p>
+      </div>
+      <div class="numcard reveal">
+        <div class="numcard-thumb"><span class="numcard-no">05</span><img src="assets/img/bukken-serena-fukutsu.webp" alt="" loading="lazy"></div>
+        <h3>解約は、不満が溜まる前に止める</h3>
+        <p>設備トラブルは24時間受付。あわせて定期巡回と入居者様との対話を重ね、退去の芽を早い段階で摘みます。</p>
+      </div>
+    </div>
     <div class="center-cta"><a href="pm/index.html" class="btn btn-primary">Lifeの管理の考え方をくわしく見る<span>›</span></a></div>
   </div>
 </section>
@@ -279,7 +315,7 @@
 <!-- ============ トータルサポート ============ -->
 <section class="support" id="support">
   <div class="container">
-    <h2 class="sec-title reveal">Lifeのトータルサポート</h2>
+    <div class="head2 is-center reveal"><p class="en">TOTAL SUPPORT</p><h2>Lifeのトータルサポート</h2></div>
     <p class="sec-lead reveal">企画する、売買する、貸す、管理する。どこか一つを切り出すのではなく、通しで担当します。</p>
     <div class="support-grid">
       <a href="business/toushi/index.html" class="support-card reveal">
@@ -372,7 +408,7 @@
 <!-- ============ 強み ============ -->
 <section class="strength" id="strength">
   <div class="container">
-    <h2 class="sec-title reveal">株式会社Lifeの強み</h2>
+    <div class="head2 is-center reveal"><p class="en">STRENGTH</p><h2>株式会社Lifeの強み</h2></div>
 
     <div class="feature-row reveal">
       <div class="feature-photo"><img src="assets/img/office.webp" alt="株式会社Life 店内" loading="lazy"></div>
@@ -397,7 +433,7 @@
 <!-- ============ お客様・オーナーの声 ============ -->
 <section class="voices" id="voices">
   <div class="container">
-    <h2 class="sec-title reveal">お客様・オーナー様の声</h2>
+    <div class="head2 is-center reveal"><p class="en">VOICE</p><h2>お客様・オーナー様の声</h2></div>
     <p class="sec-lead reveal">Lifeにお任せいただいているオーナー様に、率直なところを伺いました。</p>
     <div class="voices-notice reveal">
       <p class="voices-notice-title">【素材待ち】このセクションは掲載枠のみ用意しています</p>
@@ -423,7 +459,7 @@
 <!-- ============ よくある質問 ============ -->
 <section class="faq" id="faq">
   <div class="container">
-    <h2 class="sec-title reveal">よくあるご質問</h2>
+    <div class="head2 is-center reveal"><p class="en">FAQ</p><h2>よくあるご質問</h2></div>
     <p class="sec-lead reveal">オーナー様から実際にいただくご質問をまとめました。</p>
     <div class="faq-list">
       <details class="faq-item reveal">
@@ -462,7 +498,7 @@
 <!-- ============ 新着情報 ============ -->
 <section class="news" id="news">
   <div class="container">
-    <h2 class="sec-title reveal">新着情報</h2>
+    <div class="head2 is-center reveal"><p class="en">NEWS</p><h2>新着情報</h2></div>
     <ul class="news-list">
       <li class="reveal"><a href="jisseki/klang.html">
         <div class="news-body"><p class="news-date">2025年03月<span class="news-new">NEW</span></p>
@@ -488,7 +524,7 @@
 <!-- ============ 会社情報 ============ -->
 <section class="company" id="company">
   <div class="container">
-    <h2 class="sec-title reveal">会社情報</h2>
+    <div class="head2 is-center reveal"><p class="en">COMPANY</p><h2>会社情報</h2></div>
     <div class="company-inner">
       <div class="company-main reveal">
         <table class="company-table">
@@ -545,7 +581,7 @@
 <!-- ============ 入居者・仲介会社 ============ -->
 <section class="others" id="others">
   <div class="container">
-    <h2 class="sec-title reveal">ご入居者様・仲介会社様へ</h2>
+    <div class="head2 is-center reveal"><p class="en">RESIDENTS &amp; AGENTS</p><h2>ご入居者様・仲介会社様へ</h2></div>
     <div class="others-grid">
       <div class="others-card reveal">
         <h3>ご入居者様へ</h3>
@@ -672,7 +708,7 @@
   <a href="#contact" class="sticky-cta-form">無料相談フォーム</a>
 </div>
 
-<script src="assets/js/main.js?v=20260807a"></script>
+<script src="assets/js/main.js?v=20260807b"></script>
 
 <!-- 構造化データ：検索結果での会社情報・FAQの表示用 -->
 <script type="application/ld+json">
