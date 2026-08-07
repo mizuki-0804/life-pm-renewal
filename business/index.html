@@ -85,19 +85,6 @@
 
 <main>
 
-<style>
-.biz-compare { width: 100%; border-collapse: collapse; margin-top: 28px; background: #fff; }
-.biz-compare th, .biz-compare td { border: 1px solid var(--c-border); padding: 16px 18px; text-align: left; vertical-align: top; font-size: 14.5px; }
-.biz-compare thead th { background: var(--c-primary-deep); color: #fff; font-size: 15px; }
-.biz-compare thead th:first-child { background: transparent; border: none; }
-.biz-compare tbody th { background: var(--c-surface); font-weight: 700; color: var(--c-primary-deep); white-space: nowrap; width: 120px; }
-.biz-compare td .biz-link { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--c-primary); font-weight: 700; }
-@media (max-width: 767px) {
-  .biz-compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .biz-compare { min-width: 640px; }
-}
-</style>
-
 <nav class="breadcrumb" aria-label="パンくずリスト">
   <div class="container"><a href="../index.html">HOME</a><span>›</span>事業内容</div>
 </nav>
@@ -109,61 +96,90 @@
   </div>
 </div>
 
+<!-- アイケンジャパン型：主張見出し -->
 <section class="doc-section">
   <div class="container">
-    <p class="doc-body doc-center reveal" style="text-align:center;font-size:16px;color:var(--c-primary-deep);font-weight:500;">
-      企画する、売買する、貸す、管理する。どこか一つを切り出すのではなく、通しで担当します。企画した会社が、そのまま管理して、出口まで見る。窓口はひとつです。
-    </p>
+    <div class="claim reveal">
+      <p class="claim-eyebrow">ONE STOP</p>
+      <h2>企画する、売買する、貸す、管理する。<br>どこか一つを切り出さず、<span class="mark">通しで担当します。</span></h2>
+      <p>企画した会社が、そのまま管理して、出口まで見る。局面ごとに担当が変わらないので、同じ話を何度もしていただく必要がありません。窓口はLifeひとつです。</p>
+    </div>
+  </div>
+</section>
 
-    <h2 class="doc-h2 reveal" style="margin-top:40px;">登記上の事業内容</h2>
-    <ul class="doc-list reveal">
-      <li>新築プランニング</li>
-      <li>不動産売買仲介</li>
-      <li>不動産賃貸仲介</li>
-      <li>不動産賃貸管理</li>
-    </ul>
+<!-- 大和財託型：枠のないサービス一覧（写真小＋丸矢印） -->
+<section class="doc-section" style="padding-top:0;">
+  <div class="container">
+    <div class="svc-list">
+      <a href="toushi/index.html" class="svc-item reveal">
+        <img src="../assets/img/rc-charme.webp" alt="不動産投資・売買" loading="lazy">
+        <div>
+          <div class="svc-head"><span class="svc-arrow">›</span><h3>不動産投資・売買</h3></div>
+          <p>収益物件の購入をご検討の方へ。ご相談・投資分析から物件のご紹介、金融機関のご紹介、ご契約、購入後の管理までを通しでご支援します。将来の売却・出口もあわせてご提案します。</p>
+          <p class="svc-meta">企画・管理実績 39棟（木造32・RC造7）</p>
+        </div>
+      </a>
+      <a href="chintaikanri/index.html" class="svc-item reveal">
+        <img src="../assets/img/tenpo.webp" alt="賃貸管理" loading="lazy">
+        <div>
+          <div class="svc-head"><span class="svc-arrow">›</span><h3>賃貸管理</h3></div>
+          <p>募集、入居審査、契約、家賃の回収、設備対応、更新、退去までを一括して承ります。今の管理会社に不満がある方の管理替えもご相談ください。</p>
+          <p class="svc-meta">設備トラブルは24時間受付</p>
+        </div>
+      </a>
+      <a href="../index.html#brand" class="svc-item reveal">
+        <img src="../assets/img/bukken-klang.webp" alt="新築プランニング" loading="lazy">
+        <div>
+          <div class="svc-head"><span class="svc-arrow">›</span><h3>新築プランニング</h3></div>
+          <p>土地の選定から間取りと戸数まで、エリアの家賃相場と入居需要を調べ、収支から逆算して企画します。同じ間取りを使い回すことはしません。</p>
+          <p class="svc-meta">平均表面利回り　新築アパート9.75％／新築RC6.88％</p>
+        </div>
+      </a>
+      <a href="../kushitsu/index.html" class="svc-item reveal">
+        <img src="../assets/img/bukken-onesta.webp" alt="賃貸仲介" loading="lazy">
+        <div>
+          <div class="svc-head"><span class="svc-arrow">›</span><h3>賃貸仲介</h3></div>
+          <p>当社管理物件の入居者募集を行います。自社で抱え込まず、地場の仲介会社様へ空室情報を広くお流ししています。仲介会社様はこちらから空室情報をご確認ください。</p>
+          <p class="svc-meta">仲介会社様向け 空室物件情報</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <h2 class="doc-h2 reveal" style="margin-top:40px;">どれに当てはまりますか</h2>
-    <div class="biz-compare-wrap">
-    <table class="biz-compare reveal">
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">不動産投資・売買</th>
-          <th scope="col">賃貸管理</th>
-          <th scope="col">新築プランニング</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">こんな方に</th>
-          <td>収益物件を購入したい方、今の物件の売却・出口をご検討の方</td>
-          <td>今の管理会社に不満がある方、空室・滞納・修繕費に困っている方</td>
-          <td>土地をお持ちで、新築をご検討の方</td>
-        </tr>
-        <tr>
-          <th scope="row">できること</th>
-          <td>物件のご紹介、金融機関のご紹介、ご契約、購入後の管理までを一括対応</td>
-          <td>募集・審査・契約・家賃回収・設備対応・更新・退去までを一括対応</td>
-          <td>エリアの家賃相場を調べ、収支から逆算して間取りと戸数を企画</td>
-        </tr>
-        <tr>
-          <th scope="row">実績・根拠</th>
-          <td>企画・管理実績39棟（木造32・RC造7）</td>
-          <td>設備トラブルは24時間受付。<a href="../index.html#reasons">選ばれる5つの理由</a>で管理内容をご説明しています</td>
-          <td>平均表面利回り　新築アパート9.75％／新築RC6.88％</td>
-        </tr>
-        <tr>
-          <th scope="row">次のステップ</th>
-          <td><a href="toushi/index.html" class="biz-link">不動産投資・売買のご案内へ<span>›</span></a></td>
-          <td><a href="chintaikanri/index.html" class="biz-link">賃貸管理のご案内へ<span>›</span></a></td>
-          <td><a href="../index.html#brand" class="biz-link">企画実績（39棟）を見る<span>›</span></a></td>
-        </tr>
-      </tbody>
-    </table>
+<!-- 三和エステート型：色ベタタグ＋写真のオフセット -->
+<section class="doc-section" style="background:var(--c-surface);">
+  <div class="container">
+    <p class="claim-eyebrow" style="text-align:left;">FOR YOU</p>
+    <h2 class="doc-h2 reveal" style="margin-top:2px;">お立場に合わせてご案内します</h2>
+    <div class="duo-row">
+      <a href="../owner/index.html" class="duo-card reveal">
+        <img src="../assets/img/rc-jugame.webp" alt="オーナー・投資検討者の方へ" loading="lazy">
+        <div class="duo-tag">
+          <p class="ja">オーナー・<br>投資検討者の方</p>
+          <p class="en">FOR OWNERS</p>
+        </div>
+        <div class="duo-body">
+          <p>利回りの根拠、返済と経費を引いたあとに残る額、出口までの見通しをご説明します。</p>
+          <span class="more">オーナー様へのご案内 ›</span>
+        </div>
+      </a>
+      <a href="../nyukyosha/index.html" class="duo-card reveal">
+        <img src="../assets/img/bukken-niko.webp" alt="ご入居者様へ" loading="lazy">
+        <div class="duo-tag">
+          <p class="ja">ご入居者様</p>
+          <p class="en">FOR RESIDENTS</p>
+        </div>
+        <div class="duo-body">
+          <p>ご入居中のルール、設備の不具合、退去のお手続きについてご案内しています。</p>
+          <span class="more">ご入居者様へのご案内 ›</span>
+        </div>
+      </a>
     </div>
 
-    <div class="center-cta reveal" style="margin-top:30px;"><a href="../contact/index.html" class="btn btn-primary">事業内容についてお問い合わせ<span>›</span></a></div>
+    <div class="center-cta reveal" style="margin-top:34px;">
+      <a href="../contact/index.html" class="btn btn-primary">事業内容についてお問い合わせ<span>›</span></a>
+    </div>
   </div>
 </section>
 

@@ -85,86 +85,111 @@
 
 <main>
 
-<style>
-.flow-steps-doc { display: grid; gap: 16px; margin: 24px 0 36px; }
-.flow-step-doc {
-  display: flex; gap: 20px; align-items: flex-start;
-  border: 1px solid var(--c-border); border-radius: 4px; padding: 22px 24px; background: #fff;
-}
-.flow-step-doc .num {
-  flex: none; width: 44px; height: 44px; border-radius: 50%;
-  background: var(--c-primary); color: #fff; font-weight: 700; font-size: 15px;
-  display: grid; place-items: center;
-}
-.flow-step-doc h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 6px; color: var(--c-primary-deep); }
-.flow-step-doc p { font-size: 14px; color: var(--c-muted); }
-.pain-list { display: grid; gap: 10px; margin: 20px 0 30px; max-width: 700px; }
-.pain-list li {
-  background: #fff7ed; border: 1px solid #f4d9b3; border-left: 4px solid #e8a23a;
-  border-radius: 4px; padding: 14px 18px; font-size: 14.5px; color: #6b4a1a;
-}
-</style>
-
 <nav class="breadcrumb" aria-label="パンくずリスト">
-  <div class="container"><a href="../../index.html">HOME</a><span>›</span>不動産賃貸管理</div>
+  <div class="container"><a href="../../index.html">HOME</a><span>›</span><a href="../index.html">事業内容</a><span>›</span>賃貸管理</div>
 </nav>
 
 <div class="page-header">
   <div class="container">
     <p class="page-header-eyebrow">MANAGEMENT</p>
-    <h1>プロパティマネジメント（不動産賃貸管理）</h1>
+    <h1>賃貸管理（プロパティマネジメント）</h1>
   </div>
 </div>
 
+<!-- アイケンジャパン型：主張見出し＋写真の帯 -->
 <section class="doc-section">
   <div class="container">
-    <p class="doc-body doc-center reveal" style="text-align:center;margin-bottom:10px;">
-      不動産のオーナー様で、現在の賃貸管理について、こんなお悩みはありませんか。
-    </p>
-    <ul class="pain-list doc-center reveal">
-      <li>建物のメンテナンスがきちんとできていない</li>
-      <li>入居者様からの要望をきちんと把握できていない</li>
-      <li>入居者の募集が弱く、空室がある状態が続いている</li>
-      <li>リーシングが弱い</li>
-    </ul>
+    <div class="claim reveal">
+      <p class="claim-eyebrow">OUR STANCE</p>
+      <h2>管理会社は、<span class="mark">途中で変えていい。</span><br>いま困っていることから、<br class="sp-only">お聞かせください。</h2>
+      <p>建物のメンテナンスが行き届いていない。入居者様のご要望が把握できていない。募集が弱く、空室が続いている。こうしたお悩みは、管理のやり方を変えることで解消できることがあります。</p>
+    </div>
+    <div class="photo-strip reveal">
+      <img src="../../assets/img/bukken-serena-fukutsu.webp" alt="Lifeが管理する賃貸物件" loading="lazy">
+      <img src="../../assets/img/rc-hira.webp" alt="Lifeが管理するマンション" loading="lazy">
+      <img src="../../assets/img/bukken-taurus.webp" alt="Lifeが管理するアパート" loading="lazy">
+      <img src="../../assets/img/office.webp" alt="株式会社Life 店内" loading="lazy">
+    </div>
+  </div>
+</section>
 
-    <p class="doc-body doc-center reveal" style="text-align:center;font-size:16px;color:var(--c-primary-deep);font-weight:500;">
-      当社はただ物件を管理するのではなく、プロパティマネジメントによってオーナー様の利益の最大化を図る資産管理をいたします。
-    </p>
+<!-- GLC型：数字 -->
+<section class="doc-section" style="padding-top:0;">
+  <div class="container">
+    <div class="stat-row">
+      <div class="stat-item reveal">
+        <p class="stat-label">設備トラブルの受付体制</p>
+        <p class="stat-num"><span class="count" data-count="24">0</span><span class="unit">時間</span></p>
+        <p class="stat-note">管理受託物件が対象です</p>
+      </div>
+      <div class="stat-item reveal">
+        <p class="stat-label">企画・管理の累計実績</p>
+        <p class="stat-num"><span class="count" data-count="39">0</span><span class="unit">棟</span></p>
+        <p class="stat-note">木造32棟・RC造7棟</p>
+      </div>
+      <div class="stat-item reveal">
+        <p class="stat-label">ご相談から管理受託までの目安</p>
+        <p class="stat-num"><span class="count" data-count="3">0</span><span class="unit">か月</span></p>
+        <p class="stat-note">状況によっては短縮も可能です</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2 class="doc-h2 reveal" style="margin-top:40px;">プロパティマネジメント（PM）とは</h2>
-    <div class="doc-body" style="max-width:800px;">
-      <p>プロパティマネジメントとは、不動産経営に関する様々な業務をオーナー様に代わって行うことをいいます。</p>
-      <p>一般的な不動産管理は、建物の維持・管理、テナントの誘致・交渉、賃貸借業務の代行、賃料・共益費の請求・回収、トラブル対応などが主な業務です。しかし、それに加えて一番重要なのは、<strong>オーナー様が不動産経営によって得られる利益を最大化するように資産管理する</strong>ことです。</p>
+<!-- アイケン型：主張＋大和財託型マーカーで、PMの定義を通す -->
+<section class="doc-section" style="background:var(--c-surface);">
+  <div class="container">
+    <div class="claim reveal" style="text-align:left;max-width:820px;">
+      <p class="claim-eyebrow" style="text-align:left;">PROPERTY MANAGEMENT</p>
+      <h2 style="font-size:clamp(18px,2.3vw,25px);">ただ物件を管理するのではありません</h2>
+      <p style="margin-top:22px;">プロパティマネジメントとは、不動産経営に関する様々な業務をオーナー様に代わって行うことをいいます。一般的な不動産管理は、建物の維持・管理、テナントの誘致・交渉、賃貸借業務の代行、賃料・共益費の請求・回収、トラブル対応などが主な業務です。</p>
+      <p>しかし、それに加えて一番重要なのは、<span class="mark">オーナー様が不動産経営によって得られる利益を最大化するように資産管理する</span>ことです。</p>
       <p>ご希望を可能な限り汲み取り、リスクを徹底的に分析し、考えられるプランの中からオーナー様が最大限の利益を享受できる投資プランをご提案いたします。</p>
+      <p style="margin-top:20px;"><a href="../../pm/index.html" style="font-weight:700;">Lifeが管理で実際にやっていること（8つの施策）を見る ›</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- アパックスホーム型：左に番号リスト／右に大きな写真と巨大数字 -->
+<section class="doc-section">
+  <div class="container">
+    <p class="claim-eyebrow" style="text-align:left;">FLOW</p>
+    <h2 class="doc-h2 reveal" style="margin-top:2px;">ご相談から、管理開始まで</h2>
+    <div class="flow2">
+      <div class="flow2-list">
+        <div class="flow2-item reveal">
+          <span class="no">01</span>
+          <div><h3>ご相談</h3>
+          <p>当社に管理契約をご依頼される場合は、まずご相談ください。物件に関する書類は、その際にご開示いただきます。</p></div>
+        </div>
+        <div class="flow2-item reveal">
+          <span class="no">02</span>
+          <div><h3>現地調査・簡易診断</h3>
+          <p>物件の現地調査を行います。その後、管理条件の提示とともに、物件の今後の運用についてご提案いたします。</p></div>
+        </div>
+        <div class="flow2-item reveal">
+          <span class="no">03</span>
+          <div><h3>ご契約</h3>
+          <p>提示した管理条件にご合意いただければご契約となります。ご相談から管理受託まで約3か月が目安です。状況によっては短縮も可能ですので、まずはご相談ください。</p></div>
+        </div>
+        <div class="flow2-item reveal">
+          <span class="no">04</span>
+          <div><h3>管理開始・アフターケア</h3>
+          <p>ご契約後は当社が責任をもって管理をいたします。将来的に売却される場合も、当社にてお手伝いが可能です。</p></div>
+        </div>
+      </div>
+      <div class="flow2-visual reveal">
+        <img src="../../assets/img/rc-serena-nogata.webp" alt="Lifeが管理する賃貸物件" loading="lazy">
+        <div class="flow2-cap">
+          <p class="big">04</p>
+          <p class="en">Consulting to Management</p>
+        </div>
+      </div>
     </div>
 
-    <h2 class="doc-h2 reveal">管理委託の流れ</h2>
-    <div class="flow-steps-doc">
-      <div class="flow-step-doc reveal">
-        <span class="num">1</span>
-        <div><h3>ご相談</h3>
-        <p>当社に管理契約をご依頼される場合は、まずご相談ください。物件に関する書類は、その際にご開示いただきます。</p></div>
-      </div>
-      <div class="flow-step-doc reveal">
-        <span class="num">2</span>
-        <div><h3>現地調査</h3>
-        <p>物件の現地調査を行います。その後、管理条件の提示とともに、物件の今後の運用についてご提案いたします（簡易診断）。</p></div>
-      </div>
-      <div class="flow-step-doc reveal">
-        <span class="num">3</span>
-        <div><h3>ご契約</h3>
-        <p>提示した管理条件にご合意いただければご契約となります。ご相談から管理受託まで約3か月を目安にしていただければ幸いです。状況によっては短縮も可能ですので、まずはご相談ください。</p></div>
-      </div>
-      <div class="flow-step-doc reveal">
-        <span class="num">4</span>
-        <div><h3>アフターケア</h3>
-        <p>ご契約後は当社が責任をもってプロパティマネジメント（管理）をいたします。将来的に売却される場合も、当社にてお手伝いが可能です。</p></div>
-      </div>
+    <div class="center-cta reveal" style="margin-top:34px;">
+      <a href="../../contact/index.html" class="btn btn-primary">無料の管理相談へ<span>›</span></a>
     </div>
-    <p class="doc-body doc-center reveal" style="text-align:center;color:var(--c-muted);font-size:13.5px;">購入から売却までワンストップでサポートいたします。</p>
-
-    <div class="center-cta reveal"><a href="../../index.html#contact" class="btn btn-primary">無料の管理相談へ<span>›</span></a></div>
   </div>
 </section>
 
