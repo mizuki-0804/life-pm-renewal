@@ -67,7 +67,7 @@
         <li><a href="../business/index.html">事業内容</a></li>
         <li><a href="../jisseki/index.html">実績・事例</a></li>
         <li><a href="../index.html#message">Lifeについて</a></li>
-        <li><a href="../index.html#faq">よくある質問</a></li>
+        <li><a href="../faq/index.html">よくある質問</a></li>
         <li><a href="../contact/index.html">お問合せ</a></li>
       </ul>
     </div>
@@ -86,9 +86,16 @@
 <main>
 
 <style>
-.business-grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
-@media (max-width: 900px) { .business-grid-3 { grid-template-columns: repeat(2, 1fr) !important; } }
-@media (max-width: 600px) { .business-grid-3 { grid-template-columns: 1fr !important; } }
+.biz-compare { width: 100%; border-collapse: collapse; margin-top: 28px; background: #fff; }
+.biz-compare th, .biz-compare td { border: 1px solid var(--c-border); padding: 16px 18px; text-align: left; vertical-align: top; font-size: 14.5px; }
+.biz-compare thead th { background: var(--c-primary-deep); color: #fff; font-size: 15px; }
+.biz-compare thead th:first-child { background: transparent; border: none; }
+.biz-compare tbody th { background: var(--c-surface); font-weight: 700; color: var(--c-primary-deep); white-space: nowrap; width: 120px; }
+.biz-compare td .biz-link { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--c-primary); font-weight: 700; }
+@media (max-width: 767px) {
+  .biz-compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .biz-compare { min-width: 640px; }
+}
 </style>
 
 <nav class="breadcrumb" aria-label="パンくずリスト">
@@ -108,7 +115,7 @@
       企画する、売買する、貸す、管理する。どこか一つを切り出すのではなく、通しで担当します。企画した会社が、そのまま管理して、出口まで見る。窓口はひとつです。
     </p>
 
-    <h2 class="doc-h2 reveal" style="margin-top:40px;">取り扱う事業</h2>
+    <h2 class="doc-h2 reveal" style="margin-top:40px;">登記上の事業内容</h2>
     <ul class="doc-list reveal">
       <li>新築プランニング</li>
       <li>不動産売買仲介</li>
@@ -116,25 +123,47 @@
       <li>不動産賃貸管理</li>
     </ul>
 
-    <div class="support-grid business-grid-3" style="margin-top:32px;">
-      <a href="toushi/index.html" class="support-card reveal">
-        <img src="../assets/img/rc-charme.webp" alt="不動産投資・売買" loading="lazy">
-        <h3>不動産投資・売買</h3>
-        <p>収益物件の購入をご検討の方へ。コンサルティングから物件のご紹介、ご契約、購入後の管理までの流れをご案内します。</p>
-      </a>
-      <a href="chintaikanri/index.html" class="support-card reveal">
-        <img src="../assets/img/tenpo.webp" alt="賃貸管理" loading="lazy">
-        <h3>賃貸管理</h3>
-        <p>募集、審査、契約、家賃の回収、設備対応、更新、退去まで一括して承ります。</p>
-      </a>
-      <a href="../index.html#brand" class="support-card reveal">
-        <img src="../assets/img/bukken-klang.webp" alt="新築プランニング" loading="lazy">
-        <h3>新築プランニング</h3>
-        <p>土地の選定から間取りと戸数まで、収支から逆算して決めていきます。これまでの企画実績をご紹介します。</p>
-      </a>
+    <h2 class="doc-h2 reveal" style="margin-top:40px;">どれに当てはまりますか</h2>
+    <div class="biz-compare-wrap">
+    <table class="biz-compare reveal">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">不動産投資・売買</th>
+          <th scope="col">賃貸管理</th>
+          <th scope="col">新築プランニング</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">こんな方に</th>
+          <td>収益物件を購入したい方、今の物件の売却・出口をご検討の方</td>
+          <td>今の管理会社に不満がある方、空室・滞納・修繕費に困っている方</td>
+          <td>土地をお持ちで、新築をご検討の方</td>
+        </tr>
+        <tr>
+          <th scope="row">できること</th>
+          <td>物件のご紹介、金融機関のご紹介、ご契約、購入後の管理までを一括対応</td>
+          <td>募集・審査・契約・家賃回収・設備対応・更新・退去までを一括対応</td>
+          <td>エリアの家賃相場を調べ、収支から逆算して間取りと戸数を企画</td>
+        </tr>
+        <tr>
+          <th scope="row">実績・根拠</th>
+          <td>企画・管理実績39棟（木造32・RC造7）</td>
+          <td>設備トラブルは24時間受付。<a href="../index.html#reasons">選ばれる5つの理由</a>で管理内容をご説明しています</td>
+          <td>平均表面利回り　新築アパート9.75％／新築RC6.88％</td>
+        </tr>
+        <tr>
+          <th scope="row">次のステップ</th>
+          <td><a href="toushi/index.html" class="biz-link">不動産投資・売買のご案内へ<span>›</span></a></td>
+          <td><a href="chintaikanri/index.html" class="biz-link">賃貸管理のご案内へ<span>›</span></a></td>
+          <td><a href="../index.html#brand" class="biz-link">企画実績（39棟）を見る<span>›</span></a></td>
+        </tr>
+      </tbody>
+    </table>
     </div>
 
-    <div class="center-cta reveal"><a href="../contact/index.html" class="btn btn-primary">事業内容についてお問い合わせ<span>›</span></a></div>
+    <div class="center-cta reveal" style="margin-top:30px;"><a href="../contact/index.html" class="btn btn-primary">事業内容についてお問い合わせ<span>›</span></a></div>
   </div>
 </section>
 
@@ -175,7 +204,7 @@
         <p class="footer-nav-head">その他</p>
         <ul>
           <li><a href="../index.html#voices">オーナー様の声</a></li>
-          <li><a href="../index.html#faq">よくある質問</a></li>
+          <li><a href="../faq/index.html">よくある質問</a></li>
           <li><a href="../news/index.html">新着情報</a></li>
           <li><a href="../column/index.html">コラム</a></li>
           <li><a href="../nyukyosha/index.html">ご入居者様へ</a></li>
