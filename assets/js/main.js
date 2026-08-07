@@ -107,6 +107,82 @@
     applyParallax();
   }
 
+  /* ---------- 流れ：開いた項目に合わせて右の写真を入れ替える ---------- */
+  // 参考: アパックスホームの「アパート経営の流れ」。details/summaryで組むので
+  // JSが動かなくても開閉自体は機能し、内容は必ず読める。
+  document.querySelectorAll('.flow2').forEach(function (flow) {
+    var items = flow.querySelectorAll('.flow2-item');
+    var visual = flow.querySelector('.flow2-visual');
+    var cap = flow.querySelector('.flow2-cap');
+    if (!items.length || !visual || !cap) return;
+
+    var big = cap.querySelector('.big');
+    var en = cap.querySelector('.en');
+    var slides = visual.querySelectorAll('img');
+
+    var show = function (index) {
+      slides.forEach(function (img, i) { img.classList.toggle('is-on', i === index); });
+      var item = items[index];
+      if (!item) return;
+      cap.classList.add('is-swapping');
+      setTimeout(function () {
+        big.textContent = item.dataset.no || '';
+        en.textContent = item.dataset.en || '';
+        cap.classList.remove('is-swapping');
+      }, reduceMotion ? 0 : 220);
+    };
+
+    items.forEach(function (item, i) {
+      item.addEventListener('toggle', function () {
+        if (!item.open) return;
+        // 手風琴：ひとつ開いたら他は閉じる
+        items.forEach(function (other) { if (other !== item) other.open = false; });
+        show(i);
+      });
+      // マウスを乗せただけでも写真が切り替わる（開閉はしない）
+      item.addEventListener('mouseenter', function () { show(i); });
+    });
+
+    // 開いている項目に合わせる（初期は1つ目）
+    var openIndex = 0;
+    items.forEach(function (item, i) { if (item.open) openIndex = i; });
+    if (!items[openIndex].open) items[openIndex].open = true;
+    show(openIndex);
+  });
+
+  /* ---------- 実績カルーセル（左右の矢印で送る） ---------- */
+  document.querySelectorAll('.works-slider').forEach(function (slider) {
+    var track = slider.querySelector('.ws-track');
+    var cards = slider.querySelectorAll('.ws-card');
+    var prev = slider.querySelector('.ws-prev');
+    var next = slider.querySelector('.ws-next');
+    if (!track || !cards.length || !prev || !next) return;
+
+    var index = 0;
+    var perView = function () {
+      var w = slider.clientWidth;
+      if (w < 460) return 1;
+      if (w < 767) return 2;
+      if (w < 1000) return 3;
+      return 4;
+    };
+    var maxIndex = function () { return Math.max(0, cards.length - perView()); };
+
+    var render = function () {
+      if (index > maxIndex()) index = maxIndex();
+      var card = cards[0].getBoundingClientRect().width;
+      var gap = parseFloat(getComputedStyle(track).gap) || 18;
+      track.style.transform = 'translateX(' + (-index * (card + gap)) + 'px)';
+      prev.disabled = index <= 0;
+      next.disabled = index >= maxIndex();
+    };
+
+    prev.addEventListener('click', function () { index = Math.max(0, index - 1); render(); });
+    next.addEventListener('click', function () { index = Math.min(maxIndex(), index + 1); render(); });
+    window.addEventListener('resize', render, { passive: true });
+    render();
+  });
+
   /* ---------- 数字のカウントアップ ---------- */
   var counters = document.querySelectorAll('.count');
   var runCount = function (el) {
