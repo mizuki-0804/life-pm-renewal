@@ -1196,18 +1196,18 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
 .head2.is-center + .head2-lead { text-align: center; max-width: 860px; margin-inline: auto; }
 
 /* ---------- 番号が写真にはみ出す理由カード ---------- */
-.numcards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 26px; margin-top: 36px; }
+.numcards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 26px; margin-top: 54px; }
 .numcard { position: relative; }
 .numcard-thumb { position: relative; }
 .numcard-thumb img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .numcard-no {
-  position: absolute; left: 12px; top: -26px; z-index: 2;
+  position: absolute; left: 12px; top: -24px; z-index: 3;
   font-size: clamp(36px, 4.4vw, 54px); font-weight: 700; line-height: 1;
   color: var(--c-primary); letter-spacing: -.02em;
 }
 .numcard h3 { font-size: 16.5px; font-weight: 700; color: var(--c-primary-deep); margin-top: 15px; line-height: 1.6; }
 .numcard p { font-size: 13.5px; color: var(--c-muted); margin-top: 8px; line-height: 1.9; }
-@media (max-width: 900px) { .numcards { grid-template-columns: repeat(2, 1fr); gap: 30px 18px; } }
+@media (max-width: 900px) { .numcards { grid-template-columns: repeat(2, 1fr); gap: 40px 18px; } }
 @media (max-width: 560px) { .numcards { grid-template-columns: 1fr; } }
 
 /* ============================================
