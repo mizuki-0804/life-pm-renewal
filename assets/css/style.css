@@ -1438,3 +1438,26 @@ a.others-card:hover { box-shadow: 0 10px 22px rgba(13,95,125,.13); transform: tr
   .js .others-card.is-visible:hover, .js .aud-card.is-visible:hover,
   .js .reason-item.is-visible:hover, .js .contact-box.is-visible:hover { transform: none !important; }
 }
+
+/* ---------- トップ用：事業内容のさわり（写真を使わない軽い4項目） ---------- */
+.biz-mini { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--c-border); margin-top: 30px; }
+.biz-mini-item {
+  background: #fff; padding: 24px 20px 22px; text-decoration: none; color: inherit;
+  transition: background-color .3s, transform .4s cubic-bezier(.22,.61,.36,1);
+}
+.biz-mini-item:hover { background: var(--c-surface); }
+.biz-mini-no { font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--c-primary); }
+.biz-mini-item h3 {
+  font-size: 16px; font-weight: 700; color: var(--c-primary-deep); margin-top: 8px;
+  display: flex; align-items: center; gap: 7px; transition: color .3s;
+}
+.biz-mini-item h3::after {
+  content: "›"; font-size: 15px; color: var(--c-primary);
+  transition: transform .3s; display: inline-block;
+}
+.biz-mini-item:hover h3 { color: var(--c-primary); }
+.biz-mini-item:hover h3::after { transform: translateX(4px); }
+.biz-mini-item p { font-size: 12.5px; color: var(--c-muted); margin-top: 8px; line-height: 1.85; }
+@media (max-width: 900px) { .biz-mini { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .biz-mini { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .biz-mini-item, .biz-mini-item h3::after { transition: none !important; transform: none !important; } }
